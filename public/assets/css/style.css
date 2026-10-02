@@ -1293,6 +1293,19 @@ figure {
 .variation__body .checklist {
   margin: 28px 0;
 }
+.modes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 0 0 28px;
+}
+.modes span {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
 .variation__ideal {
   margin-bottom: 28px;
   font-size: 0.9375rem;

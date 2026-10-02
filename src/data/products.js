@@ -109,6 +109,11 @@ module.exports = [
         ],
         idealFor: 'Casamentos, 15 anos, formaturas, aniversários, eventos corporativos e celebrações sofisticadas.',
         image: { src: 'produtos/pista-de-led/galaxy', alt: 'Pista de LED Galaxy em branco frio montada em salão de eventos', video: 'galaxy' },
+        modes: [
+          { label: 'Branco frio', src: 'produtos/pista-de-led/galaxy-frio', alt: 'Pista Galaxy em branco frio' },
+          { label: 'Branco quente', src: 'produtos/pista-de-led/galaxy-quente', alt: 'Pista Galaxy em branco quente' },
+          { label: 'Combinação', src: 'produtos/pista-de-led/galaxy-combinado', alt: 'Pista Galaxy com branco quente e frio combinados' },
+        ],
       },
       {
         slug: 'paris-light-way',

@@ -10,7 +10,7 @@ module.exports = (ctx) => {
 
   const body = `
 <section class="hero" aria-labelledby="hero-title">
-  ${picture({ src: 'home/hero', alt: 'Pista de LED Galaxy iluminada em salão de eventos', video: 'home-hero', videoMobile: 'home-hero-mobile' }, { rel, ratio: '16/9', sizes: '100vw', eager: true, cls: 'hero__media', video: true })}
+  ${picture({ src: 'home/hero-v2', alt: 'Pista de LED Galaxy alternando entre branco frio, quente e combinado em salão de eventos', video: 'home-hero-v2', videoMobile: 'home-hero-v2-mobile' }, { rel, ratio: '16/9', sizes: '100vw', eager: true, cls: 'hero__media', video: true })}
   <div class="wrap hero__content">
     ${eyebrow('Pistas de LED e tecnologia para eventos · Belo Horizonte e região')}
     <h1 id="hero-title" class="hero__title">Tecnologia e experiências que transformam eventos.</h1>
