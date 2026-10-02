@@ -61,7 +61,7 @@ const otherProducts = (p, rel) => `
 </section>`;
 
 const productHero = (p, rel, crumbs, h1) => `
-<section class="product-hero">
+<section class="product-hero${p.tall ? ' product-hero--tall' : ''}">
   <div class="wrap product-hero__grid">
     <div class="product-hero__body">
       ${breadcrumbs(crumbs, rel)}
@@ -73,7 +73,7 @@ const productHero = (p, rel, crumbs, h1) => `
       </div>
     </div>
     <div class="product-hero__media">
-      ${picture(p.image, { rel, ratio: '4/5', sizes: '(min-width: 900px) 45vw, 100vw', eager: true, video: true })}
+      ${picture(p.image, { rel, ratio: p.tall ? '3/4' : '4/5', sizes: '(min-width: 900px) 45vw, 100vw', eager: true, video: true })}
     </div>
   </div>
 </section>`;

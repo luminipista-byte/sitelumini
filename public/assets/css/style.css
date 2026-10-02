@@ -1142,6 +1142,13 @@ figure {
   .product-hero__media .media__video {
     object-position: 50% 28%;
   }
+  /* equipamentos verticais (totens): mais altura para não cortar */
+  .product-hero--tall .product-hero__media .media {
+    aspect-ratio: 4 / 5 !important;
+  }
+  .product-hero--tall .product-hero__media .media__video {
+    object-position: 50% 50%;
+  }
 }
 
 /* ---------- Produto: texto ---------- */

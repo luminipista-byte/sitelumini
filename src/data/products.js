@@ -157,6 +157,7 @@ module.exports = [
 
   {
     slug: 'totem-pro',
+    tall: true, // equipamento vertical: topo da página mais alto para não cortar
     name: 'Totem Pro',
     shortName: 'Totem Pro',
     tracking: 'totem_pro',
@@ -175,7 +176,7 @@ module.exports = [
     travelNote: TRAVEL_NOTE,
     idealFor: 'Casamentos, aniversários, formaturas, festas, eventos corporativos, feiras, exposições e ativações de marca.',
     events: ['casamentos', 'quinze-anos', 'formaturas', 'aniversarios', 'corporativos', 'festas', 'outros'],
-    image: { src: 'produtos/totem-pro/capa', alt: 'Totem Pro Lumini com tela vertical de 43 polegadas', pos: '50% 40%' },
+    image: { src: 'produtos/totem-pro/capa', alt: 'Totem Pro Lumini com tela vertical de 43 polegadas', pos: '50% 40%', video: 'totem-pro' },
     gallery: [
       { src: 'produtos/totem-pro/detalhe-1', alt: 'Cinco Totens Pro lado a lado sobre uma Pista de LED Infinity' },
       { src: 'produtos/totem-pro/detalhe-2', alt: 'Totem Pro em festa de 15 anos' },
@@ -189,6 +190,7 @@ module.exports = [
 
   {
     slug: 'totem-de-led',
+    tall: true, // equipamento vertical: topo da página mais alto para não cortar
     name: 'Totem de LED',
     shortName: 'Totem de LED',
     tracking: 'totem_de_led',
