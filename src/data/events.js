@@ -49,7 +49,7 @@ module.exports = {
   gallery: [
     { src: 'eventos/ev-debutante', video: 'eventos/ev-debutante', alt: 'Debutante girando na Pista de LED em festa de 15 anos', caption: 'Pista de LED · 15 anos' },
     { src: 'eventos/ev-totem-carro', alt: 'Totem Pro ao lado de automóvel em ação de marca', caption: 'Totem Pro · Ativação de marca' },
-    { src: 'eventos/ev-tunel-rooftop', video: 'eventos/ev-tunel-rooftop', alt: 'Túnel de LED azul em rooftop à noite', caption: 'Túnel de LED' },
+    { src: 'eventos/ev-tunel-debutante', video: 'eventos/ev-tunel-debutante', alt: 'Debutante dançando e girando de vestido dentro do Túnel de LED', caption: 'Túnel de LED · 15 anos' },
     { src: 'eventos/ev-valsa', alt: 'Valsa de debutante sobre a Pista de LED', caption: 'Pista de LED · Valsa' },
     { src: 'eventos/ev-cabine', video: 'eventos/ev-cabine', alt: 'Convidados retirando fotos impressas na Cabine Vintage durante a festa', caption: 'Cabine Vintage Fotográfica' },
     { src: 'eventos/ev-totens', alt: 'Dois Totens Pro em festa ao ar livre', caption: 'Totem Pro' },
@@ -58,6 +58,6 @@ module.exports = {
     { src: 'eventos/ev-pista-infinity', video: 'eventos/ev-pista-infinity', alt: 'Pista de LED Infinity com efeitos coloridos em festa de 15 anos', caption: 'Pista Infinity · 15 anos' },
     { src: 'eventos/ev-totem-led', alt: 'Totem de LED ao lado de jardim vertical em evento', caption: 'Totem de LED' },
     { src: 'eventos/ev-carro-pista', video: 'eventos/ev-carro-pista', alt: 'Automóvel exposto sobre a Pista de LED Infinity em concessionária', caption: 'Pista Infinity · Concessionária' },
-    { src: 'eventos/ev-tunel-flores', alt: 'Túnel de LED com arcos de flores na entrada de uma casa de eventos', caption: 'Túnel de LED' },
+    { src: 'eventos/ev-tunel-rooftop', video: 'eventos/ev-tunel-rooftop', alt: 'Túnel de LED azul em rooftop à noite', caption: 'Túnel de LED' },
   ],
 };
