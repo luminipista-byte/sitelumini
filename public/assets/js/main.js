@@ -77,29 +77,49 @@
   }
 
   /*
-   * Vídeos decorativos (hero): só começam a baixar depois do load da página e
-   * nunca com prefers-reduced-motion ou economia de dados. Sem isso, fica a foto.
+   * Vídeos decorativos: só começam a baixar depois do load da página, quando
+   * estão perto da tela, e nunca com prefers-reduced-motion ou economia de
+   * dados. Pausam fora da tela. Sem isso, fica a foto.
    */
   var videos = document.querySelectorAll('video[data-video]');
   var conn = navigator.connection || {};
   if (videos.length && !reduce && !conn.saveData) {
-    var startVideos = function () {
-      var narrow = window.matchMedia('(max-width: 760px) and (orientation: portrait)').matches;
-      videos.forEach(function (v) {
-        var base = (narrow && v.getAttribute('data-video-mobile')) || v.getAttribute('data-video');
-        [['webm', 'video/webm'], ['mp4', 'video/mp4']].forEach(function (f) {
-          var s = document.createElement('source');
-          s.src = base + '.' + f[0];
-          s.type = f[1];
-          v.appendChild(s);
-        });
-        v.addEventListener('playing', function () {
-          v.classList.add('is-playing');
-        }, { once: true });
-        v.load();
-        var p = v.play();
-        if (p && p.catch) p.catch(function () {});
+    var narrow = window.matchMedia('(max-width: 760px) and (orientation: portrait)').matches;
+    var loadVideo = function (v) {
+      if (v.getAttribute('data-loaded')) return;
+      v.setAttribute('data-loaded', '1');
+      var base = (narrow && v.getAttribute('data-video-mobile')) || v.getAttribute('data-video');
+      [['webm', 'video/webm'], ['mp4', 'video/mp4']].forEach(function (f) {
+        var s = document.createElement('source');
+        s.src = base + '.' + f[0];
+        s.type = f[1];
+        v.appendChild(s);
       });
+      v.addEventListener('playing', function () {
+        v.classList.add('is-playing');
+      }, { once: true });
+      v.load();
+    };
+    var play = function (v) {
+      var p = v.play();
+      if (p && p.catch) p.catch(function () {});
+    };
+    var startVideos = function () {
+      if (!('IntersectionObserver' in window)) {
+        videos.forEach(function (v) { loadVideo(v); play(v); });
+        return;
+      }
+      var vio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) {
+            loadVideo(en.target);
+            play(en.target);
+          } else if (en.target.getAttribute('data-loaded')) {
+            en.target.pause();
+          }
+        });
+      }, { rootMargin: '200px 0px' });
+      videos.forEach(function (v) { vio.observe(v); });
     };
     if (document.readyState === 'complete') startVideos();
     else window.addEventListener('load', startVideos, { once: true });

@@ -44,7 +44,7 @@ module.exports = [
     included: ['Pista no modelo escolhido', 'Montagem e desmontagem', 'Deslocamento em Belo Horizonte, Contagem e Betim'],
     travelNote: TRAVEL_NOTE,
     events: ['casamentos', 'quinze-anos', 'formaturas', 'aniversarios', 'corporativos', 'festas'],
-    image: { src: 'produtos/pista-de-led/capa', alt: 'Pista de LED Infinity montada em terraço ao anoitecer, com convidados ao fundo', pos: '50% 72%' },
+    image: { src: 'produtos/pista-de-led/capa', alt: 'Debutante com vestido brilhante no centro de uma Pista de LED Infinity' },
     seo: {
       title: 'Pista de LED em BH — aluguel para casamentos, 15 anos e formaturas',
       description:
@@ -88,7 +88,7 @@ module.exports = [
           'Alta resistência',
         ],
         idealFor: 'Casamentos, 15 anos, formaturas, aniversários, eventos corporativos e celebrações que buscam impacto visual.',
-        image: { src: 'produtos/pista-de-led/infinity', alt: 'Pista de LED Infinity com efeito de profundidade infinita sob globos espelhados' },
+        image: { src: 'produtos/pista-de-led/capa', alt: 'Pista de LED Infinity com efeito de profundidade infinita e debutante ao centro' },
       },
       {
         slug: 'galaxy',
@@ -108,7 +108,7 @@ module.exports = [
           'Alta resistência',
         ],
         idealFor: 'Casamentos, 15 anos, formaturas, aniversários, eventos corporativos e celebrações sofisticadas.',
-        image: { src: 'produtos/pista-de-led/galaxy', alt: 'Pista de LED Galaxy em branco frio montada em salão de eventos' },
+        image: { src: 'produtos/pista-de-led/galaxy', alt: 'Pista de LED Galaxy em branco frio montada em salão de eventos', video: 'galaxy' },
       },
       {
         slug: 'paris-light-way',
@@ -129,7 +129,7 @@ module.exports = [
           'Alta resistência',
         ],
         idealFor: 'Casamentos, 15 anos, formaturas, aniversários, eventos corporativos e celebrações em ambientes elegantes.',
-        image: { src: 'produtos/pista-de-led/paris-light-way', alt: 'Pista de LED Paris Light Way com fundo branco e luz quente em salão' },
+        image: { src: 'produtos/pista-de-led/paris-light-way', alt: 'Pista de LED Paris Light Way com fundo branco e luz quente em salão', video: 'paris-light-way' },
       },
       {
         slug: 'paris-black',
@@ -301,7 +301,7 @@ module.exports = [
     travelNote: TRAVEL_NOTE,
     idealFor: 'Casamentos, aniversários, formaturas, festas, eventos corporativos e confraternizações.',
     events: ['casamentos', 'quinze-anos', 'formaturas', 'aniversarios', 'corporativos', 'festas', 'outros'],
-    image: { src: 'produtos/cabine-vintage/capa', alt: 'Cabine Vintage Fotográfica em madeira com flash, tripé e impressora', pos: '50% 62%' },
+    image: { src: 'produtos/cabine-vintage/capa', alt: 'Cabine Vintage Fotográfica em madeira com flash, tripé e impressora', pos: '50% 62%', video: 'cabine-vintage' },
     gallery: [
       { src: 'produtos/cabine-vintage/detalhe-1', alt: 'Cabine Vintage com flash, tripé e impressora em jardim', pos: '50% 44%', ratio: '3/4' },
       { src: 'produtos/cabine-vintage/detalhe-2', alt: 'Cabine Vintage Fotográfica com acessórios em evento noturno', ratio: '3/4' },

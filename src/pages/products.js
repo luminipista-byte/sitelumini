@@ -116,7 +116,7 @@ ${p.variations
 <section class="variation${i % 2 ? ' variation--reverse' : ''}" id="${v.slug}" aria-labelledby="v-${v.slug}">
   <div class="wrap variation__grid">
     <div class="variation__media">
-      ${picture(v.image, { rel, ratio: '4/5', sizes: '(min-width: 900px) 50vw, 100vw' })}
+      ${picture(v.image, { rel, ratio: '4/5', sizes: '(min-width: 900px) 50vw, 100vw', video: true })}
     </div>
     <div class="variation__body">
       <p class="index-label">${String(i + 1).padStart(2, '0')} / ${String(p.variations.length).padStart(2, '0')}</p>
