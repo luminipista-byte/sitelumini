@@ -1616,6 +1616,49 @@ figure {
     align-items: center;
   }
 }
+@media (min-width: 900px) {
+  .structure--reverse {
+    grid-template-columns: 4fr 7fr;
+  }
+}
+@media (max-width: 899px) {
+  /* no celular o texto vem antes do vídeo em todos os capítulos */
+  .structure--reverse .structure__media {
+    order: 2;
+  }
+}
+.structure .stats,
+.structure + .wrap .stats {
+  margin-top: clamp(48px, 7vw, 88px);
+}
+.logistics {
+  margin-top: clamp(64px, 9vw, 112px);
+}
+.logistics__title {
+  margin-bottom: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line-dark);
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-stretch: 118%;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.logistics__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+@media (min-width: 760px) {
+  .logistics__grid {
+    gap: 24px;
+  }
+}
+.logistics__grid .caption {
+  margin-top: 10px;
+}
 .structure .prose {
   margin-top: 8px;
 }

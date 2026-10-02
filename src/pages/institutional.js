@@ -34,29 +34,41 @@ ${pageHead({
 </section>
 
 <section class="section section--paper">
-  <div class="wrap chapter chapter--text">
-    <p class="index-label">Parcerias</p>
-    <h2 class="chapter__title">Crescer junto com as casas de eventos.</h2>
-    <div class="prose prose--cols">
-      <p>Desde o início, o modelo de negócio foi construído a partir de parcerias com casas de festas e eventos. Em vez de depender apenas da locação avulsa, a Lumini passou a instalar pistas fixas nos salões parceiros — que oferecem a pista aos seus clientes com a garantia de quem fabricou o equipamento.</p>
-      <p>Hoje são mais de 50 casas parceiras com pistas fixas e mais de 300 pistas de LED vendidas. Somadas às locações, as pistas e os equipamentos Lumini já estiveram em mais de 1.500 eventos.</p>
+  <div class="wrap structure">
+    <div class="structure__body">
+      <p class="index-label">Parcerias</p>
+      <h2 class="chapter__title">Crescer junto com as casas de eventos.</h2>
+      <div class="prose">
+        <p>Desde o início, o modelo de negócio foi construído a partir de parcerias com casas de festas e eventos. Em vez de depender apenas da locação avulsa, a Lumini passou a instalar pistas fixas nos salões parceiros — que oferecem a pista aos seus clientes com a garantia de quem fabricou o equipamento.</p>
+        <p>Hoje são mais de 50 casas parceiras com pistas fixas e mais de 300 pistas de LED vendidas. Somadas às locações, as pistas e os equipamentos Lumini já estiveram em mais de 1.500 eventos.</p>
+      </div>
+      <p class="section-foot"><a class="link-arrow" href="${rel}parceiros/">Conheça as Casas Parceiras</a></p>
     </div>
-    ${stats()}
-    <p class="section-foot"><a class="link-arrow" href="${rel}parceiros/">Conheça as Casas Parceiras</a></p>
+    <div class="structure__media">
+      ${picture({ src: 'sobre/montagem-salao', video: 'sobre/montagem-salao', alt: 'Equipe Lumini descarregando e montando uma pista de LED em salão de eventos' }, { rel, ratio: '9/16', sizes: '(min-width: 900px) 30vw, 90vw', video: true })}
+      <p class="caption">Montagem de uma pista de LED em salão parceiro.</p>
+    </div>
   </div>
+  <div class="wrap">${stats()}</div>
 </section>
 
 <section class="section">
-  <div class="wrap chapter chapter--text">
-    <p class="index-label">Novos equipamentos</p>
-    <h2 class="chapter__title">A fabricação abriu caminho para outros produtos.</h2>
-    <div class="prose prose--cols">
-      <p>O gosto por fabricar e encarar desafios levou ao desenvolvimento de novos equipamentos: Totem Pro, Túnel de LED, Cabine Vintage Fotográfica, Plataforma 360, Totem de LED, entre outros.</p>
-      <p>Todos seguem o mesmo princípio das pistas: desenvolvimento próprio, pensado para resistência e praticidade na montagem. As pistas, por exemplo, são feitas em alumínio — mais leves para transportar e resistentes para o uso contínuo.</p>
+  <div class="wrap structure structure--reverse">
+    <div class="structure__media">
+      ${picture({ src: 'sobre/equipamentos', video: 'sobre/equipamentos', alt: 'Pista Galaxy, Totem Pro, Cabine Vintage e Túnel de LED em funcionamento' }, { rel, ratio: '9/16', sizes: '(min-width: 900px) 30vw, 90vw', video: true })}
+      <p class="caption">Pista Galaxy, Totem Pro, Túnel de LED e Cabine Vintage.</p>
     </div>
-    <ul class="product-links" role="list">
-      ${products.map((p) => `<li><a href="${rel}produtos/${p.slug}/">${esc(p.name)}</a></li>`).join('')}
-    </ul>
+    <div class="structure__body">
+      <p class="index-label">Novos equipamentos</p>
+      <h2 class="chapter__title">A fabricação abriu caminho para outros produtos.</h2>
+      <div class="prose">
+        <p>O gosto por fabricar e encarar desafios levou ao desenvolvimento de novos equipamentos: Totem Pro, Túnel de LED, Cabine Vintage Fotográfica, Plataforma 360, Totem de LED, entre outros.</p>
+        <p>Todos seguem o mesmo princípio das pistas: desenvolvimento próprio, pensado para resistência e praticidade na montagem. As pistas, por exemplo, são feitas em alumínio — mais leves para transportar e resistentes para o uso contínuo.</p>
+      </div>
+      <ul class="product-links" role="list">
+        ${products.map((p) => `<li><a href="${rel}produtos/${p.slug}/">${esc(p.name)}</a></li>`).join('')}
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -83,6 +95,14 @@ ${pageHead({
       ${picture({ src: 'sobre/fabrica-video', video: 'sobre/fabrica', alt: 'Montagem de uma pista de LED na fábrica da Lumini, van saindo do galpão e equipe instalando a pista no evento' }, { rel, ratio: '9/16', sizes: '(min-width: 900px) 30vw, 90vw', video: true })}
       <p class="caption">Da fábrica ao salão: fabricação, transporte e montagem pela equipe Lumini.</p>
     </div>
+  </div>
+  <div class="wrap logistics">
+    <h3 class="logistics__title">Logística própria</h3>
+    <ul class="logistics__grid" role="list">
+      <li>${picture({ src: 'sobre/frota', video: 'sobre/frota', alt: 'Vans e veículos da frota própria da Lumini' }, { rel, ratio: '3/4', sizes: '(min-width: 760px) 30vw, 33vw', video: true })}<p class="caption">Frota própria</p></li>
+      <li>${picture({ src: 'sobre/carregamento', video: 'sobre/carregamento', alt: 'Equipe Lumini carregando equipamentos na van' }, { rel, ratio: '3/4', sizes: '(min-width: 760px) 30vw, 33vw', video: true })}<p class="caption">Carregamento</p></li>
+      <li>${picture({ src: 'sobre/montagem-local', video: 'sobre/montagem-local', alt: 'Equipe montando uma Pista Infinity no local do evento' }, { rel, ratio: '3/4', sizes: '(min-width: 760px) 30vw, 33vw', video: true })}<p class="caption">Montagem no local</p></li>
+    </ul>
   </div>
 </section>
 
