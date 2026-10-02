@@ -61,26 +61,28 @@ ${pageHead({
 </section>
 
 <section class="section section--navy">
-  <div class="wrap chapter chapter--text">
-    <p class="index-label">Estrutura</p>
-    <h2 class="chapter__title">Fábrica, galpão, equipe e vans próprias.</h2>
-    <div class="prose prose--cols">
-      <p>A Lumini não apenas entrega o equipamento. A empresa conta com fábrica e galpão, mão de obra especializada e vans próprias para o deslocamento — o que permite cuidar de toda a logística: levar o equipamento até o salão, montar, desmontar e, quando necessário, manter operadores durante o evento.</p>
-      <p>A manutenção também é feita internamente. Quem fabrica conhece cada peça, e isso se traduz em equipamentos bem cuidados e em respostas rápidas quando algo precisa de ajuste.</p>
+  <div class="wrap structure">
+    <div class="structure__body">
+      <p class="index-label">Estrutura</p>
+      <h2 class="chapter__title">Fábrica, galpão, equipe e vans próprias.</h2>
+      <div class="prose">
+        <p>A Lumini não apenas entrega o equipamento. A empresa conta com fábrica e galpão, mão de obra especializada e vans próprias para o deslocamento — o que permite cuidar de toda a logística: levar o equipamento até o salão, montar, desmontar e, quando necessário, manter operadores durante o evento.</p>
+        <p>A manutenção também é feita internamente. Quem fabrica conhece cada peça, e isso se traduz em equipamentos bem cuidados e em respostas rápidas quando algo precisa de ajuste.</p>
+      </div>
+      <ul class="principles" role="list">
+        <li>Desenvolvimento e fabricação próprios</li>
+        <li>Manutenção e montagem próprias</li>
+        <li>Fábrica e galpão</li>
+        <li>Mão de obra especializada</li>
+        <li>Vans próprias e logística completa</li>
+        <li>Pistas de LED em alumínio</li>
+        <li>Qualidade e preço justo</li>
+      </ul>
     </div>
-    <ul class="principles" role="list">
-      <li>Desenvolvimento e fabricação próprios</li>
-      <li>Manutenção e montagem próprias</li>
-      <li>Fábrica e galpão</li>
-      <li>Mão de obra especializada</li>
-      <li>Vans próprias e logística completa</li>
-      <li>Pistas de LED em alumínio</li>
-      <li>Qualidade e preço justo</li>
-    </ul>
-  </div>
-  <div class="wrap structure-media">
-    ${picture({ src: 'sobre/fabrica', alt: 'Fábrica e galpão da Lumini em Contagem' }, { rel, ratio: '3/2', sizes: '(min-width: 900px) 60vw, 100vw' })}
-    ${picture({ src: 'sobre/equipe-montagem', alt: 'Equipe Lumini montando uma pista de LED' }, { rel, ratio: '3/4', sizes: '(min-width: 900px) 30vw, 100vw' })}
+    <div class="structure__media">
+      ${picture({ src: 'sobre/fabrica-video', video: 'sobre/fabrica', alt: 'Montagem de uma pista de LED na fábrica da Lumini, van saindo do galpão e equipe instalando a pista no evento' }, { rel, ratio: '9/16', sizes: '(min-width: 900px) 30vw, 90vw', video: true })}
+      <p class="caption">Da fábrica ao salão: fabricação, transporte e montagem pela equipe Lumini.</p>
+    </div>
   </div>
 </section>
 

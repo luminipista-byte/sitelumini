@@ -1605,16 +1605,27 @@ figure {
   background: var(--gold);
   transform: rotate(45deg);
 }
-.structure-media {
+.structure {
   display: grid;
-  gap: 16px;
-  margin-top: clamp(56px, 8vw, 96px);
+  gap: 48px;
 }
-@media (min-width: 760px) {
-  .structure-media {
-    grid-template-columns: 2fr 1fr;
-    align-items: end;
+@media (min-width: 900px) {
+  .structure {
+    grid-template-columns: 7fr 4fr;
+    gap: 96px;
+    align-items: center;
   }
+}
+.structure .prose {
+  margin-top: 8px;
+}
+.structure__media {
+  width: 100%;
+  max-width: 380px;
+  margin-inline: auto;
+}
+.section--navy .caption {
+  color: var(--on-dark-soft);
 }
 
 /* ---------- Eventos ---------- */
