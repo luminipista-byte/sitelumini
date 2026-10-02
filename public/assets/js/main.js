@@ -77,19 +77,32 @@
   }
 
   /*
-   * Vídeos decorativos: só começam a baixar depois do load da página, quando
-   * estão perto da tela, e nunca com prefers-reduced-motion ou economia de
-   * dados. Pausam fora da tela. Sem isso, fica a foto.
+   * Vídeos decorativos (sem som, em loop): tocam automaticamente no
+   * computador e no celular. Começam a baixar quando chegam perto da tela e
+   * pausam fora dela. MP4 (H.264) vem primeiro: é o formato que todo celular
+   * reproduz bem — o WebM fica só como alternativa.
    */
   var videos = document.querySelectorAll('video[data-video]');
-  var conn = navigator.connection || {};
-  if (videos.length && !reduce && !conn.saveData) {
+  if (videos.length) {
     var narrow = window.matchMedia('(max-width: 760px) and (orientation: portrait)').matches;
+    var visible = new Set();
+    var play = function (v) {
+      v.muted = true;
+      v.defaultMuted = true;
+      v.playsInline = true;
+      var p = v.play();
+      if (p && p.catch) p.catch(function () {});
+    };
     var loadVideo = function (v) {
       if (v.getAttribute('data-loaded')) return;
       v.setAttribute('data-loaded', '1');
+      v.muted = true;
+      v.setAttribute('muted', '');
+      v.setAttribute('playsinline', '');
+      v.setAttribute('webkit-playsinline', '');
+      v.preload = 'auto';
       var base = (narrow && v.getAttribute('data-video-mobile')) || v.getAttribute('data-video');
-      [['webm', 'video/webm'], ['mp4', 'video/mp4']].forEach(function (f) {
+      [['mp4', 'video/mp4'], ['webm', 'video/webm']].forEach(function (f) {
         var s = document.createElement('source');
         s.src = base + '.' + f[0];
         s.type = f[1];
@@ -97,32 +110,54 @@
       });
       v.addEventListener('playing', function () {
         v.classList.add('is-playing');
-      }, { once: true });
+      });
+      // tenta de novo assim que houver dados suficientes (celular)
+      ['loadeddata', 'canplay'].forEach(function (ev) {
+        v.addEventListener(ev, function () {
+          if (visible.has(v) && v.paused) play(v);
+        });
+      });
       v.load();
     };
-    var play = function (v) {
-      var p = v.play();
-      if (p && p.catch) p.catch(function () {});
+    var resumeVisible = function () {
+      visible.forEach(function (v) {
+        if (v.paused) play(v);
+      });
     };
+    // Modo de pouca bateria (iPhone) bloqueia o autoplay até o 1º toque
+    ['touchstart', 'pointerdown', 'scroll'].forEach(function (ev) {
+      window.addEventListener(ev, resumeVisible, { passive: true });
+    });
+    document.addEventListener('visibilitychange', function () {
+      if (!document.hidden) resumeVisible();
+    });
     var startVideos = function () {
+      if (startVideos.done) return;
+      startVideos.done = true;
       if (!('IntersectionObserver' in window)) {
-        videos.forEach(function (v) { loadVideo(v); play(v); });
+        videos.forEach(function (v) { visible.add(v); loadVideo(v); play(v); });
         return;
       }
       var vio = new IntersectionObserver(function (entries) {
         entries.forEach(function (en) {
+          var v = en.target;
           if (en.isIntersecting) {
-            loadVideo(en.target);
-            play(en.target);
-          } else if (en.target.getAttribute('data-loaded')) {
-            en.target.pause();
+            visible.add(v);
+            loadVideo(v);
+            play(v);
+          } else {
+            visible.delete(v);
+            if (v.getAttribute('data-loaded')) v.pause();
           }
         });
-      }, { rootMargin: '200px 0px' });
+      }, { rootMargin: '300px 0px' });
       videos.forEach(function (v) { vio.observe(v); });
     };
     if (document.readyState === 'complete') startVideos();
-    else window.addEventListener('load', startVideos, { once: true });
+    else {
+      window.addEventListener('load', startVideos, { once: true });
+      setTimeout(startVideos, 2500); // não espera indefinidamente pelo load no celular
+    }
   }
 
   /* Formulário de contato → mensagem pronta no WhatsApp */
