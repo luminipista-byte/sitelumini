@@ -1450,6 +1450,11 @@ figure {
     grid-template-columns: 7fr 4fr;
     align-items: end;
   }
+  /* duas fotos verticais (ex.: Totem Pro): colunas iguais, sem cortar o equipamento */
+  .product-gallery__grid--even {
+    grid-template-columns: 1fr 1fr;
+    max-width: 1040px;
+  }
 }
 
 /* ---------- Outros produtos ---------- */

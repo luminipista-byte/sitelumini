@@ -207,8 +207,8 @@ ${productHero(p, rel, crumbs, esc(p.name))}
 ${
   p.gallery && p.gallery.length
     ? `<section class="product-gallery" aria-label="Fotos ${esc(p.name)}">
-  <div class="wrap product-gallery__grid">
-    ${p.gallery.map((g, i) => picture(g, { rel, ratio: i === 0 ? '4/3' : '3/4', sizes: '(min-width: 900px) 50vw, 100vw' })).join('')}
+  <div class="wrap product-gallery__grid${p.gallery.every((g) => g.ratio === '3/4') ? ' product-gallery__grid--even' : ''}">
+    ${p.gallery.map((g, i) => picture(g, { rel, ratio: g.ratio || (i === 0 ? '4/3' : '3/4'), sizes: '(min-width: 900px) 50vw, 100vw' })).join('')}
   </div>
 </section>`
     : ''
@@ -267,7 +267,7 @@ ${pageHead({
         (p, i) => `
     <article class="catalog__item${i === 0 ? ' catalog__item--lead' : ''}">
       <a class="catalog__media" href="${p.slug}/" tabindex="-1" aria-hidden="true">
-        ${picture(p.image, { rel, ratio: i === 0 ? '16/10' : '4/3', sizes: i === 0 ? '100vw' : '(min-width: 900px) 50vw, 100vw' })}
+        ${picture(p.image, { rel, ratio: i === 0 ? '16/10' : p.tall ? '3/4' : '4/3', sizes: i === 0 ? '100vw' : '(min-width: 900px) 50vw, 100vw' })}
       </a>
       <div class="catalog__body">
         <p class="index-label">${String(i + 1).padStart(2, '0')}</p>

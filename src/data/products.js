@@ -176,10 +176,10 @@ module.exports = [
     travelNote: TRAVEL_NOTE,
     idealFor: 'Casamentos, aniversários, formaturas, festas, eventos corporativos, feiras, exposições e ativações de marca.',
     events: ['casamentos', 'quinze-anos', 'formaturas', 'aniversarios', 'corporativos', 'festas', 'outros'],
-    image: { src: 'produtos/totem-pro/capa', alt: 'Totem Pro Lumini com tela vertical de 43 polegadas', pos: '50% 40%', video: 'totem-pro' },
+    image: { src: 'produtos/totem-pro/capa', alt: 'Totem Pro com tela vertical de 43 polegadas e moldura iluminada em evento', pos: '50% 68%', video: 'totem-pro' },
     gallery: [
-      { src: 'produtos/totem-pro/detalhe-1', alt: 'Cinco Totens Pro lado a lado sobre uma Pista de LED Infinity' },
-      { src: 'produtos/totem-pro/detalhe-2', alt: 'Totem Pro em festa de 15 anos' },
+      { src: 'produtos/totem-pro/detalhe-1', alt: 'Totem Pro exibindo vídeo de drinks, com copo personalizado em primeiro plano', pos: '50% 30%', ratio: '3/4' },
+      { src: 'produtos/totem-pro/detalhe-2', alt: 'Totem Pro iluminado em festa de 15 anos', ratio: '3/4' },
     ],
     seo: {
       title: 'Totem Pro — totem fotográfico com impressão em BH',
