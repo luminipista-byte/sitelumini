@@ -102,7 +102,7 @@ module.exports = (ctx) => {
 <section class="section" aria-labelledby="historia-title">
   <div class="wrap story-teaser">
     <div class="story-teaser__media">
-      ${picture({ src: 'sobre/claudiney-fundador', alt: 'Claudiney, fundador da Lumini' }, { rel, ratio: '4/5', sizes: '(min-width: 900px) 40vw, 100vw' })}
+      ${picture({ src: 'sobre/claudiney-fundador', alt: 'Claudiney Campelo, fundador da Lumini' }, { rel, ratio: '4/5', sizes: '(min-width: 900px) 40vw, 100vw' })}
     </div>
     <div class="story-teaser__body">
       ${eyebrow('A Lumini')}

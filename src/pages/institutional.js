@@ -15,14 +15,14 @@ ${pageHead({
   crumbs,
   eyebrowText: `A Lumini · Desde ${site.foundingYear}`,
   title: 'Da fotografia à fabricação de pistas de LED.',
-  lead: 'A história de uma empresa de Contagem que aprendeu a fabricar, transportar, montar e operar os próprios equipamentos para eventos.',
+  lead: 'A história de um fotógrafo que aprendeu a fabricar, transportar, montar e operar os próprios equipamentos para eventos.',
 })}
 
 <section class="section section--tight">
   <div class="wrap chapter">
     <div class="chapter__media">
-      ${picture({ src: 'sobre/claudiney-fundador', alt: 'Claudiney, fundador da Lumini Pista de LED' }, { rel, ratio: '4/5', sizes: '(min-width: 900px) 40vw, 100vw', eager: true })}
-      <p class="caption">Claudiney, fundador da Lumini</p>
+      ${picture({ src: 'sobre/claudiney-fundador', alt: 'Claudiney Campelo, fundador da Lumini Pista de LED' }, { rel, ratio: '4/5', sizes: '(min-width: 900px) 40vw, 100vw', eager: true })}
+      <p class="caption">Claudiney Campelo, fundador da Lumini.</p>
     </div>
     <div class="chapter__body prose">
       <p class="index-label">Origem</p>
