@@ -588,6 +588,19 @@ figure {
 .hero__media::after {
   display: none;
 }
+@media (max-width: 899px) {
+  /* celular: topo do tamanho do conteúdo e vídeo aproximado na pista */
+  .hero {
+    min-height: 0;
+    padding: calc(var(--header-h) + 36px) 0 40px;
+  }
+  .hero__media img,
+  .hero__media .media__video {
+    object-position: 50% 82%;
+    transform: scale(1.22);
+    transform-origin: 50% 82%;
+  }
+}
 .hero::after {
   /* escurecimento só para legibilidade do texto sobre a foto */
   content: '';
