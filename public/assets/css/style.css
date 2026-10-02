@@ -953,6 +953,11 @@ figure {
   color: var(--ink-soft);
 }
 /* Comparação: comprar x pista fixa em parceria */
+.compare-block {
+  margin-top: clamp(56px, 8vw, 96px);
+  padding-top: clamp(56px, 8vw, 96px);
+  border-top: 1px solid var(--line);
+}
 .compare {
   width: 100%;
   border-collapse: collapse;
