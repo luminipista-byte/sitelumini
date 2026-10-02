@@ -44,7 +44,7 @@ module.exports = [
     included: ['Pista no modelo escolhido', 'Montagem e desmontagem', 'Deslocamento em Belo Horizonte, Contagem e Betim'],
     travelNote: TRAVEL_NOTE,
     events: ['casamentos', 'quinze-anos', 'formaturas', 'aniversarios', 'corporativos', 'festas'],
-    image: { src: 'produtos/pista-de-led/capa', alt: 'Pista de LED Lumini montada em salão de festas' },
+    image: { src: 'produtos/pista-de-led/capa', alt: 'Pista de LED Infinity montada em terraço ao anoitecer, com convidados ao fundo', pos: '50% 72%' },
     seo: {
       title: 'Pista de LED em BH — aluguel para casamentos, 15 anos e formaturas',
       description:
@@ -88,7 +88,7 @@ module.exports = [
           'Alta resistência',
         ],
         idealFor: 'Casamentos, 15 anos, formaturas, aniversários, eventos corporativos e celebrações que buscam impacto visual.',
-        image: { src: 'produtos/pista-de-led/infinity', alt: 'Pista de LED Infinity com efeito de profundidade infinita' },
+        image: { src: 'produtos/pista-de-led/infinity', alt: 'Pista de LED Infinity com efeito de profundidade infinita sob globos espelhados' },
       },
       {
         slug: 'galaxy',
@@ -108,7 +108,7 @@ module.exports = [
           'Alta resistência',
         ],
         idealFor: 'Casamentos, 15 anos, formaturas, aniversários, eventos corporativos e celebrações sofisticadas.',
-        image: { src: 'produtos/pista-de-led/galaxy', alt: 'Pista de LED Galaxy em iluminação branca' },
+        image: { src: 'produtos/pista-de-led/galaxy', alt: 'Pista de LED Galaxy em branco frio montada em salão de eventos' },
       },
       {
         slug: 'paris-light-way',
@@ -129,7 +129,7 @@ module.exports = [
           'Alta resistência',
         ],
         idealFor: 'Casamentos, 15 anos, formaturas, aniversários, eventos corporativos e celebrações em ambientes elegantes.',
-        image: { src: 'produtos/pista-de-led/paris-light-way', alt: 'Pista de LED Paris Light Way com fundo branco e luz quente' },
+        image: { src: 'produtos/pista-de-led/paris-light-way', alt: 'Pista de LED Paris Light Way com fundo branco e luz quente em salão' },
       },
       {
         slug: 'paris-black',
@@ -150,7 +150,7 @@ module.exports = [
           'Alta resistência',
         ],
         idealFor: 'Casamentos, 15 anos, formaturas, aniversários, eventos corporativos e festas temáticas.',
-        image: { src: 'produtos/pista-de-led/paris-black', alt: 'Pista de LED Paris Black com fundo preto e vidros fumê' },
+        image: { src: 'produtos/pista-de-led/paris-black', alt: 'Pista de LED Paris Black com fundo preto e luz quente em salão de festas' },
       },
     ],
   },
@@ -175,10 +175,10 @@ module.exports = [
     travelNote: TRAVEL_NOTE,
     idealFor: 'Casamentos, aniversários, formaturas, festas, eventos corporativos, feiras, exposições e ativações de marca.',
     events: ['casamentos', 'quinze-anos', 'formaturas', 'aniversarios', 'corporativos', 'festas', 'outros'],
-    image: { src: 'produtos/totem-pro/capa', alt: 'Totem Pro Lumini com tela vertical de 43 polegadas' },
+    image: { src: 'produtos/totem-pro/capa', alt: 'Totem Pro Lumini com tela vertical de 43 polegadas', pos: '50% 40%' },
     gallery: [
-      { src: 'produtos/totem-pro/detalhe-1', alt: 'Convidados usando o Totem Pro em evento' },
-      { src: 'produtos/totem-pro/detalhe-2', alt: 'Foto impressa na hora pelo Totem Pro' },
+      { src: 'produtos/totem-pro/detalhe-1', alt: 'Cinco Totens Pro lado a lado sobre uma Pista de LED Infinity' },
+      { src: 'produtos/totem-pro/detalhe-2', alt: 'Totem Pro em festa de 15 anos' },
     ],
     seo: {
       title: 'Totem Pro — totem fotográfico com impressão em BH',
@@ -215,10 +215,10 @@ module.exports = [
     travelNote: TRAVEL_NOTE,
     idealFor: 'Eventos corporativos, lançamentos, feiras, exposições, ativações de marca, festas e casamentos.',
     events: ['casamentos', 'quinze-anos', 'corporativos', 'festas', 'outros'],
-    image: { src: 'produtos/totem-de-led/capa', alt: 'Totem de LED vertical exibindo conteúdo em evento' },
+    image: { src: 'produtos/totem-de-led/capa', alt: 'Totens de LED verticais exibindo conteúdo em evento corporativo', video: 'totem-de-led' },
     gallery: [
-      { src: 'produtos/totem-de-led/detalhe-1', alt: 'Totem de LED em evento corporativo' },
-      { src: 'produtos/totem-de-led/detalhe-2', alt: 'Detalhe do acabamento do Totem de LED' },
+      { src: 'produtos/totem-de-led/detalhe-1', alt: 'Três Totens de LED com conteúdo de marca em evento corporativo' },
+      { src: 'produtos/totem-de-led/detalhe-2', alt: 'Totem de LED exibindo a identidade visual de um evento' },
     ],
     seo: {
       title: 'Totem de LED para eventos em BH — tela vertical 1:3',
@@ -259,10 +259,10 @@ module.exports = [
     travelNote: TRAVEL_NOTE,
     idealFor: 'Casamentos, festas, formaturas, eventos corporativos, shows, inaugurações e aniversários.',
     events: ['casamentos', 'quinze-anos', 'formaturas', 'aniversarios', 'corporativos', 'festas', 'outros'],
-    image: { src: 'produtos/tunel-de-led/capa', alt: 'Túnel de LED iluminado na entrada de um evento' },
+    image: { src: 'produtos/tunel-de-led/capa', alt: 'Túnel de LED iluminado na entrada de um evento', video: 'tunel-de-led' },
     gallery: [
-      { src: 'produtos/tunel-de-led/detalhe-1', alt: 'Túnel de LED montado em curva' },
-      { src: 'produtos/tunel-de-led/detalhe-2', alt: 'Efeito de cores do Túnel de LED' },
+      { src: 'produtos/tunel-de-led/detalhe-1', alt: 'Túnel de LED em rosa com arcos de flores na entrada de uma casa de eventos' },
+      { src: 'produtos/tunel-de-led/detalhe-2', alt: 'Túnel de LED iluminado em azul' },
     ],
     seo: {
       title: 'Túnel de LED para entrada de eventos em BH',
@@ -299,8 +299,8 @@ module.exports = [
     events: ['casamentos', 'quinze-anos', 'formaturas', 'aniversarios', 'corporativos', 'festas', 'outros'],
     image: { src: 'produtos/cabine-vintage/capa', alt: 'Cabine Vintage Fotográfica em madeira com design retrô' },
     gallery: [
-      { src: 'produtos/cabine-vintage/detalhe-1', alt: 'Tirinha de fotos impressa pela Cabine Vintage' },
-      { src: 'produtos/cabine-vintage/detalhe-2', alt: 'Convidados na Cabine Vintage Fotográfica' },
+      { src: 'produtos/cabine-vintage/detalhe-1', alt: 'Detalhe da Cabine Vintage: câmera, tela e impressora em madeira' },
+      { src: 'produtos/cabine-vintage/detalhe-2', alt: 'Cabine Vintage Fotográfica com acessórios em evento noturno' },
     ],
     seo: {
       title: 'Cabine Fotográfica Vintage para eventos em BH',

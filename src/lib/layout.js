@@ -18,7 +18,7 @@ const NAV = [
 const brandMark = (rel, variant = 'light') => {
   const file = variant === 'light' ? site.logo.light : site.logo.dark;
   if (exists(file)) {
-    return `<img src="${rel}${file}" alt="${esc(site.name)}" width="148" height="40">`;
+    return `<img src="${rel}${file}" alt="${esc(site.name)}" width="102" height="40">`;
   }
   // Reserva tipográfica — substituir pelo logo oficial em public/assets/img/marca/
   return `<span class="wordmark" aria-label="${esc(site.name)}"><span class="wordmark__name">Lumini</span><span class="wordmark__sub">Pista de LED</span></span>`;
@@ -147,7 +147,8 @@ ${t.searchConsoleVerification ? `<meta name="google-site-verification" content="
 <meta property="og:url" content="${canonical}">
 ${ogImage ? `<meta property="og:image" content="${site.url}/${ogImage}">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">` : ''}
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="${rel}assets/img/marca/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="${rel}assets/img/marca/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="${rel}assets/img/marca/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,300..700&family=Manrope:wght@400;500;600&display=swap">

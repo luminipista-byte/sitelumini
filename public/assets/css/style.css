@@ -302,6 +302,20 @@ figure {
   height: 100%;
   object-fit: cover;
 }
+.media__video {
+  /* vídeo opcional sobre a foto; aparece só quando começa a tocar */
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s var(--ease);
+  pointer-events: none;
+}
+.media__video.is-playing {
+  opacity: 1;
+}
 .media--pending {
   display: flex;
   align-items: flex-end;
@@ -579,8 +593,15 @@ figure {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(8, 19, 34, 0.55) 0%, rgba(8, 19, 34, 0) 30%, rgba(8, 19, 34, 0.25) 55%, rgba(8, 19, 34, 0.9) 100%);
+  background: linear-gradient(180deg, rgba(8, 19, 34, 0.6) 0%, rgba(8, 19, 34, 0.25) 25%, rgba(8, 19, 34, 0.6) 50%, rgba(8, 19, 34, 0.94) 100%);
   pointer-events: none;
+}
+@media (min-width: 900px) {
+  .hero::after {
+    background:
+      linear-gradient(90deg, rgba(8, 19, 34, 0.78) 0%, rgba(8, 19, 34, 0.45) 45%, rgba(8, 19, 34, 0) 75%),
+      linear-gradient(180deg, rgba(8, 19, 34, 0.55) 0%, rgba(8, 19, 34, 0) 30%, rgba(8, 19, 34, 0.25) 55%, rgba(8, 19, 34, 0.9) 100%);
+  }
 }
 .hero__content {
   position: relative;
@@ -1117,6 +1138,9 @@ figure {
   }
   .product-hero__media .media {
     aspect-ratio: 4 / 3 !important;
+  }
+  .product-hero__media .media__video {
+    object-position: 50% 28%;
   }
 }
 

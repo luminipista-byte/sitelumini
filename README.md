@@ -69,10 +69,34 @@ node build.js
 O script gera `-800.webp` e `-1600.webp`; o build passa a usar a foto com
 `srcset` e lazy loading. A lista completa está em `docs/fotos-pendentes.md`.
 
-**Logo oficial:** salve `assets/img/marca/logo-lumini.svg` (versão para fundo
-escuro) e rode o build — o header e o rodapé trocam o logotipo tipográfico de
-reserva pelo arquivo. Para compartilhamento em redes sociais, adicione
-`assets/img/marca/og-lumini.jpg` (1200×630).
+Para enquadrar melhor um equipamento cortado, acrescente `pos` à imagem em
+`src/data` (ex.: `pos: '50% 70%'`, aplicado como `object-position`).
+
+**Logo oficial:** `assets/img/marca/logo-lumini.png` (negativo, para fundo
+escuro — usado no header e no rodapé) e `logo-lumini-escuro.png` (original,
+para fundo claro), configurados em `site.logo` (`src/data/site.js`). Favicon:
+`favicon.ico` na raiz, `assets/img/marca/favicon-48.png` e
+`apple-touch-icon.png`. Compartilhamento: `assets/img/marca/og-lumini.jpg`
+(1200×630).
+
+## Vídeos
+
+Ficam em `public/assets/video/` (`<nome>.mp4` H.264 + `<nome>.webm` VP9, sem
+áudio, trecho de ~10 s, até ~5 MB cada; nunca acima de 10 MB). São usados só
+no topo da home e de páginas de produto, pelos campos `video` (e
+`videoMobile`, versão vertical para celular) da imagem em `src/data` ou
+`src/pages/home.js`. A foto continua sendo o conteúdo principal (LCP): o
+`main.js` só começa a baixar o vídeo depois do carregamento da página e não
+o carrega com "reduzir movimento" ou economia de dados ativos.
+
+Gerar um trecho:
+
+```bash
+ffmpeg -ss 2 -t 10 -i original.mov -an -vf "scale=720:-2,fps=30,format=yuv420p" \
+  -c:v libx264 -crf 25 -preset slow -movflags +faststart public/assets/video/nome.mp4
+ffmpeg -ss 2 -t 10 -i original.mov -an -vf "scale=720:-2,fps=30,format=yuv420p" \
+  -c:v libvpx-vp9 -b:v 0 -crf 37 public/assets/video/nome.webm
+```
 
 ## Tracking
 

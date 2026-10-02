@@ -45,13 +45,15 @@ module.exports = {
   ],
 
   gallery: [
-    { src: 'eventos/evento-01', alt: 'Pista de LED Lumini em festa de casamento', type: 'casamentos', size: 'wide' },
-    { src: 'eventos/evento-02', alt: 'Túnel de LED na entrada de uma formatura', type: 'formaturas', size: 'tall' },
-    { src: 'eventos/evento-03', alt: 'Convidados na pista de LED em festa de 15 anos', type: 'quinze-anos' },
-    { src: 'eventos/evento-04', alt: 'Totem de LED em evento corporativo', type: 'corporativos', size: 'tall' },
-    { src: 'eventos/evento-05', alt: 'Cabine Vintage Fotográfica em festa', type: 'festas' },
-    { src: 'eventos/evento-06', alt: 'Pista de LED Paris Light Way em casamento', type: 'casamentos', size: 'wide' },
-    { src: 'eventos/evento-07', alt: 'Totem Pro em festa de aniversário', type: 'aniversarios' },
-    { src: 'eventos/evento-08', alt: 'Pista de LED em salão de formatura', type: 'formaturas' },
+    { src: 'eventos/evento-01', alt: 'Convidada em vestido de festa sobre a Pista de LED Infinity', size: 'wide' },
+    { src: 'eventos/evento-02', alt: 'Túnel de LED com arcos de flores na entrada de uma casa de eventos', size: 'tall' },
+    { src: 'eventos/evento-03', alt: 'Totem Pro exibindo foto de convidada em evento' },
+    { src: 'eventos/evento-04', alt: 'Totem de LED ao lado de jardim vertical em evento', size: 'tall' },
+    { src: 'eventos/evento-05', alt: 'Automóvel exposto sobre Pista de LED Infinity em concessionária', type: 'corporativos' },
+    { src: 'eventos/evento-06', alt: 'Pista de LED Paris Black em salão de festas', size: 'wide' },
+    { src: 'eventos/evento-07', alt: 'Totem Pro em ação de marca ao ar livre', type: 'corporativos' },
+    { src: 'eventos/evento-08', alt: 'Pista de LED Galaxy em salão de festas' },
+    { src: 'eventos/evento-09', alt: 'Túnel de LED na entrada de uma concessionária', type: 'corporativos', size: 'tall' },
+    { src: 'eventos/evento-10', alt: 'Pista de LED Paris Light Way em salão com globos espelhados', size: 'wide' },
   ],
 };

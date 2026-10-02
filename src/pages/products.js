@@ -73,7 +73,7 @@ const productHero = (p, rel, crumbs, h1) => `
       </div>
     </div>
     <div class="product-hero__media">
-      ${picture(p.image, { rel, ratio: '4/5', sizes: '(min-width: 900px) 45vw, 100vw', eager: true })}
+      ${picture(p.image, { rel, ratio: '4/5', sizes: '(min-width: 900px) 45vw, 100vw', eager: true, video: true })}
     </div>
   </div>
 </section>`;

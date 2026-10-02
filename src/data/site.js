@@ -42,11 +42,12 @@ module.exports = {
     { value: '50', prefix: '+', label: 'casas parceiras com pista fixa' },
   ],
 
-  // Logo oficial. Enquanto o arquivo não existir em public/, o site usa o
-  // logotipo tipográfico de reserva (ver components.js > brandMark).
+  // Logo oficial (PNG com transparência, 305x120 = 3x a altura exibida).
+  // Enquanto o arquivo não existir em public/, o site usa o logotipo
+  // tipográfico de reserva (ver layout.js > brandMark).
   logo: {
-    light: 'assets/img/marca/logo-lumini.svg', // versão para fundo escuro
-    dark: 'assets/img/marca/logo-lumini-escuro.svg', // versão para fundo claro
+    light: 'assets/img/marca/logo-lumini.png', // versão para fundo escuro (negativo)
+    dark: 'assets/img/marca/logo-lumini-escuro.png', // versão para fundo claro (original)
     social: 'assets/img/marca/og-lumini.jpg', // 1200x630 para compartilhamento
   },
 
