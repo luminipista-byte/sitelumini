@@ -155,14 +155,10 @@ ${pageHead({
     </div>
   </div>
   <div class="wrap compare-block" aria-labelledby="compare-title">
-    <div class="section-head section-head--split">
+    <div class="section-head">
       <div>
         ${eyebrow('Para casas de eventos')}
         <h2 id="compare-title" class="section-head__title">Por que ter uma pista fixa em parceria, em vez de comprar?</h2>
-      </div>
-      <div class="section-head__text">
-        <p>Quem administra uma casa de eventos já vive preocupado em deixar o espaço perfeito para cada evento. Agora imagine um LED da pista queimar, ou um acidente no evento anterior danificar uma placa — e não dar tempo de resolver antes da próxima festa.</p>
-        <p>Com a Lumini como parceira, esse problema é nosso. Com equipe, logística própria e estoque de pistas, trocamos a placa com defeito, fazemos a manutenção e renovamos a pista durante a parceria.</p>
       </div>
     </div>
     <table class="compare">
