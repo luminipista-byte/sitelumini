@@ -217,10 +217,10 @@ module.exports = [
     travelNote: TRAVEL_NOTE,
     idealFor: 'Eventos corporativos, lançamentos, feiras, exposições, ativações de marca, festas e casamentos.',
     events: ['casamentos', 'quinze-anos', 'corporativos', 'festas', 'outros'],
-    image: { src: 'produtos/totem-de-led/capa', alt: 'Totens de LED verticais exibindo conteúdo em evento corporativo', video: 'totem-de-led' },
+    image: { src: 'produtos/totem-de-led/capa', alt: 'Totem de LED vertical exibindo conteúdo de marca em evento corporativo', pos: '50% 100%', video: 'totem-de-led' },
     gallery: [
-      { src: 'produtos/totem-de-led/detalhe-1', alt: 'Três Totens de LED com conteúdo de marca em evento corporativo' },
-      { src: 'produtos/totem-de-led/detalhe-2', alt: 'Totem de LED exibindo a identidade visual de um evento' },
+      { src: 'produtos/totem-de-led/detalhe-1', alt: 'Três Totens de LED com conteúdo institucional em evento corporativo', pos: '50% 60%', ratio: '3/4' },
+      { src: 'produtos/totem-de-led/detalhe-2', alt: 'Totem de LED exibindo comunicado em espaço corporativo', pos: '50% 52%', ratio: '3/4' },
     ],
     seo: {
       title: 'Totem de LED para eventos em BH — tela vertical 1:3',
