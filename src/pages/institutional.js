@@ -136,7 +136,26 @@ ${pageHead({
     ${partnerGrid(rel)}
   </div>
 </section>
-<section class="section section--paper" aria-labelledby="compare-title">
+<section class="section section--paper">
+  <div class="wrap partner-cta">
+    <div>
+      ${eyebrow('Para casas de eventos')}
+      <h2 class="section-head__title">Sua casa com uma pista de LED fixa.</h2>
+    </div>
+    <div>
+      <p>A parceria com casas de eventos é a base da Lumini. Se você administra um salão ou espaço de festas e quer conversar sobre uma pista fixa, fale com a nossa equipe.</p>
+      ${waButton({
+        label: 'Conversar sobre parceria',
+        product: 'parceria',
+        productName: 'Parceria — casa de eventos',
+        message: 'Olá! Vim do site e gostaria de conversar sobre parceria para minha casa de eventos.',
+        placement: 'parceiros',
+        cls: 'btn btn--dark',
+      })}
+    </div>
+  </div>
+</section>
+<section class="section" aria-labelledby="compare-title">
   <div class="wrap">
     <div class="section-head section-head--split">
       <div>
