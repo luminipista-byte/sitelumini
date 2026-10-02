@@ -208,7 +208,7 @@ ${
   p.gallery && p.gallery.length
     ? `<section class="product-gallery" aria-label="Fotos ${esc(p.name)}">
   <div class="wrap product-gallery__grid${p.gallery.every((g) => g.ratio === '3/4') ? ' product-gallery__grid--even' : ''}">
-    ${p.gallery.map((g, i) => picture(g, { rel, ratio: g.ratio || (i === 0 ? '4/3' : '3/4'), sizes: '(min-width: 900px) 50vw, 100vw' })).join('')}
+    ${p.gallery.map((g, i) => picture(g, { rel, ratio: g.ratio || (i === 0 ? '4/3' : '3/4'), sizes: '(min-width: 900px) 50vw, 100vw', video: Boolean(g.video) })).join('')}
   </div>
 </section>`
     : ''

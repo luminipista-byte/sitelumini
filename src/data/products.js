@@ -129,7 +129,7 @@ module.exports = [
           'Alta resistência',
         ],
         idealFor: 'Casamentos, 15 anos, formaturas, aniversários, eventos corporativos e celebrações em ambientes elegantes.',
-        image: { src: 'produtos/pista-de-led/paris-light-way', alt: 'Pista de LED Paris Light Way com fundo branco e luz quente em salão', video: 'paris-light-way' },
+        image: { src: 'produtos/pista-de-led/paris-light-way', alt: 'Pista de LED Paris Light Way com luz quente em salão com globos espelhados', pos: '50% 62%', video: 'paris-light-way' },
       },
       {
         slug: 'paris-black',
@@ -265,7 +265,7 @@ module.exports = [
     image: { src: 'produtos/tunel-de-led/capa', alt: 'Túnel de LED iluminado na entrada de um evento', video: 'tunel-de-led' },
     gallery: [
       { src: 'produtos/tunel-de-led/detalhe-1', alt: 'Túnel de LED em rosa com arcos de flores na entrada de uma casa de eventos' },
-      { src: 'produtos/tunel-de-led/detalhe-2', alt: 'Túnel de LED iluminado em azul' },
+      { src: 'produtos/tunel-de-led/detalhe-2', alt: 'Túnel de LED azul em curva com piso estrelado', video: 'tunel-de-led-detalhe' },
     ],
     seo: {
       title: 'Túnel de LED para entrada de eventos em BH',
@@ -283,20 +283,19 @@ module.exports = [
     waName: 'da Cabine Vintage',
     tagline: 'A nostalgia das antigas fotografias em uma experiência inesquecível.',
     summary:
-      'Estrutura em madeira de inspiração retrô, fotos impressas na hora em tirinha com 3 poses e arte personalizada.',
+      'Estrutura em madeira de inspiração retrô e fotos impressas na hora em três formatos — tirinha, horizontal e polaroid — com arte personalizada.',
     intro: [
       'A Cabine Vintage resgata o charme das antigas máquinas fotográficas e transforma cada registro em uma lembrança para levar para casa.',
-      'Com estrutura em madeira de inspiração retrô, tela, câmera, flash e impressora, a cabine imprime as fotos na hora em formato de tirinha, como nas tradicionais máquinas lambe-lambe. Cada registro tem 3 poses e 2 cópias, com a arte do seu evento.',
+      'Com estrutura em madeira de inspiração retrô, tela, câmera, flash e impressora, a cabine imprime as fotos na hora, como nas tradicionais máquinas lambe-lambe. São três formatos, todos com a arte do seu evento: tirinha (3 poses e 2 cópias), horizontal (3 poses em uma foto) e polaroid (2 poses e 2 cópias).',
     ],
     features: [
       'Estrutura de madeira com design retrô',
       'Fotos impressas na hora',
-      'Tirinha com 3 poses',
-      '2 cópias por registro',
+      'Três formatos: tirinha, horizontal e polaroid',
       'Arte personalizada para o evento',
       'Operador incluso',
     ],
-    specs: ['Estrutura em madeira', 'Tela, câmera, flash e impressora', 'Impressão em tirinha: 3 poses, 2 cópias', 'Operador durante a utilização'],
+    specs: ['Estrutura em madeira', 'Tela, câmera, flash e impressora', 'Tirinha: 3 poses, 2 cópias', 'Horizontal: 3 poses, 1 foto', 'Polaroid: 2 poses, 2 cópias', 'Operador durante a utilização'],
     included: ['Cabine Vintage', 'Operador', 'Montagem e desmontagem', 'Deslocamento em Belo Horizonte, Contagem e Betim'],
     travelNote: TRAVEL_NOTE,
     idealFor: 'Casamentos, aniversários, formaturas, festas, eventos corporativos e confraternizações.',
@@ -309,7 +308,7 @@ module.exports = [
     seo: {
       title: 'Cabine Fotográfica Vintage para eventos em BH',
       description:
-        'Cabine fotográfica vintage em madeira com impressão na hora: tirinha com 3 poses, 2 cópias e arte personalizada. Operador incluso. BH, Contagem e Betim.',
+        'Cabine fotográfica vintage em madeira com impressão na hora: tirinha, horizontal ou polaroid, com arte personalizada. Operador incluso. BH, Contagem e Betim.',
     },
   },
 ];
