@@ -182,7 +182,7 @@ module.exports = [
       'Como totem fotográfico, registra os convidados e imprime as fotos na hora. Também reproduz fotos e vídeos, faz captação de leads, ações de marca e jogos interativos — o que o torna tão útil em um casamento quanto em uma ativação corporativa.',
     ],
     uses: ['Totem fotográfico com impressão na hora', 'Reprodução de fotos e vídeos', 'Captação de leads', 'Ações de marca', 'Jogos interativos'],
-    features: ['Tela vertical de 43"', 'Câmera integrada', 'Impressora fotográfica', 'Design moderno e versátil'],
+    features: ['Fotos ilimitadas durante o evento', 'Tela vertical de 43"', 'Câmera integrada', 'Impressora fotográfica', 'Design moderno e versátil'],
     specs: ['Tela vertical de 43 polegadas', 'Câmera integrada', 'Impressora fotográfica', 'Operador durante o uso como totem fotográfico ou interativo'],
     included: ['Totem Pro', 'Operador', 'Montagem e desmontagem', 'Deslocamento em Belo Horizonte, Contagem e Betim'],
     travelNote: TRAVEL_NOTE,
@@ -301,6 +301,7 @@ module.exports = [
       'Com estrutura em madeira de inspiração retrô, tela, câmera, flash e impressora, a cabine imprime as fotos na hora, como nas tradicionais máquinas lambe-lambe. São três formatos, todos com a arte do seu evento: tirinha (3 poses e 2 cópias), horizontal (3 poses em uma foto) e polaroid (2 poses e 2 cópias).',
     ],
     features: [
+      'Fotos ilimitadas durante o evento',
       'Estrutura de madeira com design retrô',
       'Fotos impressas na hora',
       'Três formatos: tirinha, horizontal e polaroid',
