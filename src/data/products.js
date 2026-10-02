@@ -89,6 +89,10 @@ module.exports = [
         ],
         idealFor: 'Casamentos, 15 anos, formaturas, aniversários, eventos corporativos e celebrações que buscam impacto visual.',
         image: { src: 'produtos/pista-de-led/capa', alt: 'Pista de LED Infinity com efeito de profundidade infinita e debutante ao centro' },
+        extras: [
+          { src: 'produtos/pista-de-led/infinity-extra-1', alt: 'Pista Infinity com efeito de profundidade em cores e puffs iluminados', pos: '45% 60%' },
+          { src: 'produtos/pista-de-led/infinity-extra-2', alt: 'Pista Infinity colorida em rooftop ao anoitecer', pos: '50% 75%' },
+        ],
       },
       {
         slug: 'galaxy',
@@ -156,6 +160,9 @@ module.exports = [
         ],
         idealFor: 'Casamentos, 15 anos, formaturas, aniversários, eventos corporativos e festas temáticas.',
         image: { src: 'produtos/pista-de-led/paris-black', alt: 'Pista de LED Paris Black com fundo preto e luz quente em salão de festas' },
+        extras: [
+          { src: 'produtos/pista-de-led/paris-black-extra-1', alt: 'Pista Paris Black montada em salão com painéis de LED', pos: '50% 78%' },
+        ],
       },
     ],
   },

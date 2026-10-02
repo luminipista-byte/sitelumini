@@ -125,6 +125,7 @@ ${p.variations
       ${v.description.map((d) => `<p>${esc(d)}</p>`).join('')}
       ${list(v.features, 'checklist checklist--cols')}
       ${v.modes ? `<ul class="modes" role="list">${v.modes.map((m) => `<li>${picture(m, { rel, ratio: '1/1', sizes: '(min-width: 900px) 12vw, 30vw' })}<span>${esc(m.label)}</span></li>`).join('')}</ul>` : ''}
+      ${v.extras ? `<div class="extras extras--${v.extras.length}">${v.extras.map((m) => picture(m, { rel, ratio: '4/5', sizes: '(min-width: 900px) 20vw, 45vw' })).join('')}</div>` : ''}
       <p class="variation__ideal"><strong>Ideal para</strong> ${esc(v.idealFor)}</p>
       ${ctaFor(p, v, 'pista_variacao', { label: `Orçamento da ${v.name}`, cls: 'btn btn--dark' })}
     </div>

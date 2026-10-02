@@ -1306,6 +1306,15 @@ figure {
   font-weight: 500;
   color: var(--ink-soft);
 }
+.extras {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 0 0 28px;
+}
+.extras--1 .media {
+  grid-column: 1;
+}
 .variation__ideal {
   margin-bottom: 28px;
   font-size: 0.9375rem;
