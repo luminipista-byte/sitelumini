@@ -593,8 +593,18 @@ figure {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(8, 19, 34, 0.6) 0%, rgba(8, 19, 34, 0.25) 25%, rgba(8, 19, 34, 0.6) 50%, rgba(8, 19, 34, 0.94) 100%);
+  /* celular: véu azul-marinho mais uniforme para o texto ler bem sobre o vídeo */
+  background:
+    linear-gradient(rgba(8, 19, 34, 0.5), rgba(8, 19, 34, 0.5)),
+    linear-gradient(180deg, rgba(8, 19, 34, 0.35) 0%, rgba(8, 19, 34, 0.15) 25%, rgba(8, 19, 34, 0.45) 55%, rgba(8, 19, 34, 0.85) 100%);
   pointer-events: none;
+}
+@media (max-width: 899px) {
+  .hero__title,
+  .hero__lead,
+  .hero .eyebrow {
+    text-shadow: 0 1px 12px rgba(8, 19, 34, 0.55);
+  }
 }
 @media (min-width: 900px) {
   .hero::after {
