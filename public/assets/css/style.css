@@ -1618,27 +1618,24 @@ figure {
 }
 
 /* ---------- Eventos ---------- */
+/* Galeria uniforme: todos os quadros em 3:4, fotos e vídeos alternados */
 .gallery {
   display: grid;
-  gap: 12px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 10px;
 }
 @media (min-width: 760px) {
   .gallery {
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-flow: dense;
-    gap: 16px;
+    gap: 40px 20px;
   }
-  .gallery__item--wide {
-    grid-column: span 2;
-  }
-  .gallery__item--tall {
-    grid-row: span 2;
-  }
-  .gallery__item .media {
-    height: 100%;
-    aspect-ratio: auto !important;
-    min-height: 260px;
-  }
+}
+.gallery__caption {
+  margin: 12px 0 0;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--ink-soft);
 }
 .event-types {
   display: grid;

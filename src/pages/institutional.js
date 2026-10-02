@@ -164,7 +164,7 @@ ${pageHead({
 <section class="section section--tight" aria-label="Galeria de eventos">
   <div class="wrap gallery">
     ${events.gallery
-      .map((g) => `<div class="gallery__item${g.size ? ` gallery__item--${g.size}` : ''}">${picture(g, { rel, ratio: g.size === 'wide' ? '3/2' : g.size === 'tall' ? '3/4' : '1/1', sizes: '(min-width: 900px) 33vw, 100vw' })}</div>`)
+      .map((g) => `<div class="gallery__item">${picture(g, { rel, ratio: '3/4', sizes: '(min-width: 760px) 33vw, 50vw', video: Boolean(g.video) })}${g.caption ? `<p class="gallery__caption">${esc(g.caption)}</p>` : ''}</div>`)
       .join('')}
   </div>
   <div class="wrap"><p class="section-foot">Mais registros no Instagram <a href="${site.instagram.url}" target="_blank" rel="noopener">${esc(site.instagram.handle)}</a></p></div>
