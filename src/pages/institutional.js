@@ -136,21 +136,64 @@ ${pageHead({
     ${partnerGrid(rel)}
   </div>
 </section>
-<section class="section section--paper">
-  <div class="wrap partner-cta">
-    <div>
-      ${eyebrow('Para casas de eventos')}
-      <h2 class="section-head__title">Sua casa com uma pista de LED fixa.</h2>
+<section class="section section--paper" aria-labelledby="compare-title">
+  <div class="wrap">
+    <div class="section-head section-head--split">
+      <div>
+        ${eyebrow('Para donos de salão')}
+        <h2 id="compare-title" class="section-head__title">Por que ter uma pista fixa em parceria, em vez de comprar?</h2>
+      </div>
+      <div class="section-head__text">
+        <p>Quem administra um salão de festas já vive preocupado em deixar o espaço perfeito para cada evento. Agora imagine um LED da pista queimar, ou um acidente no evento anterior danificar uma placa — e não dar tempo de resolver antes da próxima festa.</p>
+        <p>Com a Lumini como parceira, esse problema é nosso. Com equipe, logística própria e estoque de pistas, trocamos a placa com defeito, fazemos a manutenção e renovamos a pista durante a parceria.</p>
+      </div>
     </div>
-    <div>
-      <p>A parceria com casas de eventos é a base da Lumini. Se você administra um salão ou espaço de festas e quer conversar sobre uma pista fixa, fale com a nossa equipe.</p>
+    <table class="compare">
+      <caption class="visually-hidden">Comparação entre comprar uma pista de LED e ter uma pista fixa em parceria com a Lumini</caption>
+      <thead>
+        <tr>
+          <td></td>
+          <th scope="col">Comprando a pista</th>
+          <th scope="col" class="compare__lumini">Pista fixa em parceria com a Lumini</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">LED ou placa com defeito</th>
+          <td data-label="Comprando a pista">Você precisa encontrar quem conserte — e nem sempre dá tempo antes do próximo evento.</td>
+          <td data-label="Pista fixa Lumini">A Lumini troca a placa prontamente, com peças do próprio estoque.</td>
+        </tr>
+        <tr>
+          <th scope="row">Pista danificada em um evento</th>
+          <td data-label="Comprando a pista">O prejuízo e a correria ficam com o salão.</td>
+          <td data-label="Pista fixa Lumini">Nossa equipe de logística resolve, e o salão segue pronto para o próximo evento.</td>
+        </tr>
+        <tr>
+          <th scope="row">Manutenção</th>
+          <td data-label="Comprando a pista">Por conta do salão.</td>
+          <td data-label="Pista fixa Lumini">Feita pela equipe Lumini, que fabrica a pista.</td>
+        </tr>
+        <tr>
+          <th scope="row">Aparência ao longo do tempo</th>
+          <td data-label="Comprando a pista">A pista envelhece com o uso.</td>
+          <td data-label="Pista fixa Lumini">Renovada durante a parceria — nunca fica com aspecto de velha.</td>
+        </tr>
+        <tr>
+          <th scope="row">Rotina do dono do salão</th>
+          <td data-label="Comprando a pista">Mais uma preocupação antes de cada evento.</td>
+          <td data-label="Pista fixa Lumini">Tranquilidade: a pista está sempre pronta para receber o evento.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="compare-cta">
+      <p class="compare-cta__text">Seu salão sempre pronto para receber o próximo evento. <strong>Uma parceria indispensável.</strong></p>
       ${waButton({
-        label: 'Conversar sobre parceria',
+        label: 'Quero uma pista fixa no meu salão',
         product: 'parceria',
         productName: 'Parceria — casa de eventos',
-        message: 'Olá! Vim do site e gostaria de conversar sobre parceria para minha casa de eventos.',
-        placement: 'parceiros',
-        cls: 'btn btn--dark',
+        message: 'Olá! Vim do site e gostaria de conversar sobre uma pista de LED fixa em parceria para meu salão.',
+        placement: 'parceiros_comparacao',
+        cls: 'btn btn--dark btn--lg',
       })}
     </div>
   </div>
