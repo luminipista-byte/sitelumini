@@ -50,7 +50,7 @@ const otherProducts = (p, rel) => `
         .filter((o) => o.slug !== p.slug)
         .map(
           (o) => `<li><a href="${rel}produtos/${o.slug}/">
-            ${picture(o.image, { rel, ratio: '1/1', sizes: '(min-width: 900px) 20vw, 50vw', cls: 'other-products__media' })}
+            ${picture(o.image, { rel, ratio: '3/4', sizes: '(min-width: 900px) 20vw, 50vw', cls: 'other-products__media' })}
             <span class="other-products__name">${esc(o.name)}</span>
             <span class="other-products__text">${esc(o.tagline)}</span>
           </a></li>`

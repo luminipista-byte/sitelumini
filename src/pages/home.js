@@ -69,7 +69,7 @@ module.exports = (ctx) => {
           (p, i) => `
       <article class="product-card">
         <a class="product-card__media" href="produtos/${p.slug}/" tabindex="-1" aria-hidden="true">
-          ${picture(p.image, { rel, ratio: '4/5', sizes: '(min-width: 900px) 25vw, (min-width: 600px) 50vw, 100vw' })}
+          ${picture(p.image, { rel, ratio: '3/4', sizes: '(min-width: 900px) 25vw, (min-width: 600px) 50vw, 100vw' })}
         </a>
         <p class="index-label">${String(i + 2).padStart(2, '0')}</p>
         <h3 class="product-card__title"><a href="produtos/${p.slug}/">${esc(p.name)}</a></h3>

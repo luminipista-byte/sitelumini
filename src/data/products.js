@@ -231,6 +231,7 @@ module.exports = [
 
   {
     slug: 'tunel-de-led',
+    tall: true, // equipamento vertical: topo da página mais alto para não cortar
     name: 'Túnel de LED',
     shortName: 'Túnel de LED',
     tracking: 'tunel_de_led',
@@ -275,6 +276,7 @@ module.exports = [
 
   {
     slug: 'cabine-vintage',
+    tall: true, // equipamento vertical: topo da página mais alto para não cortar
     name: 'Cabine Vintage Fotográfica',
     shortName: 'Cabine Vintage',
     tracking: 'cabine_vintage',
@@ -299,10 +301,10 @@ module.exports = [
     travelNote: TRAVEL_NOTE,
     idealFor: 'Casamentos, aniversários, formaturas, festas, eventos corporativos e confraternizações.',
     events: ['casamentos', 'quinze-anos', 'formaturas', 'aniversarios', 'corporativos', 'festas', 'outros'],
-    image: { src: 'produtos/cabine-vintage/capa', alt: 'Cabine Vintage Fotográfica em madeira com design retrô' },
+    image: { src: 'produtos/cabine-vintage/capa', alt: 'Cabine Vintage Fotográfica em madeira com flash, tripé e impressora', pos: '50% 62%' },
     gallery: [
-      { src: 'produtos/cabine-vintage/detalhe-1', alt: 'Detalhe da Cabine Vintage: câmera, tela e impressora em madeira' },
-      { src: 'produtos/cabine-vintage/detalhe-2', alt: 'Cabine Vintage Fotográfica com acessórios em evento noturno' },
+      { src: 'produtos/cabine-vintage/detalhe-1', alt: 'Cabine Vintage com flash, tripé e impressora em jardim', pos: '50% 44%', ratio: '3/4' },
+      { src: 'produtos/cabine-vintage/detalhe-2', alt: 'Cabine Vintage Fotográfica com acessórios em evento noturno', ratio: '3/4' },
     ],
     seo: {
       title: 'Cabine Fotográfica Vintage para eventos em BH',
