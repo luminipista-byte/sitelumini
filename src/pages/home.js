@@ -2,7 +2,7 @@ const site = require('../data/site');
 const products = require('../data/products');
 const events = require('../data/events');
 const { esc, picture, waButton } = require('../lib/html');
-const { eyebrow, stats, partnerGrid, finalCta, businessSchema } = require('../lib/components');
+const { eyebrow, stats, partnerGrid, finalCta, businessSchema, reviewsSection } = require('../lib/components');
 
 module.exports = (ctx) => {
   const rel = '';
@@ -127,6 +127,8 @@ module.exports = (ctx) => {
     <p class="section-foot"><a class="link-arrow" href="parceiros/">Ver Casas Parceiras</a></p>
   </div>
 </section>
+
+${reviewsSection(rel)}
 
 <section class="section" aria-labelledby="eventos-title">
   <div class="wrap">

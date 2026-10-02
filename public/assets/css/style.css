@@ -1099,6 +1099,69 @@ figure {
   color: var(--ink-soft);
 }
 
+/* ---------- Depoimentos ---------- */
+.reviews {
+  columns: 1;
+  column-gap: 20px;
+}
+@media (min-width: 700px) {
+  .reviews {
+    columns: 2;
+  }
+}
+@media (min-width: 1050px) {
+  .reviews {
+    columns: 3;
+  }
+}
+.review {
+  break-inside: avoid;
+  margin-bottom: 20px;
+  padding: 28px;
+  border: 1px solid var(--line-dark);
+}
+.review__stars {
+  margin: 0 0 16px;
+  font-size: 0.9375rem;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+}
+.review__text {
+  margin: 0 0 24px;
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--white);
+}
+.review__text p {
+  margin-bottom: 0.6em;
+}
+.review__author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--on-dark-soft);
+}
+.review__author img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: none;
+}
+.review__author strong {
+  display: block;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--white);
+}
+.section--navy .link-arrow {
+  color: var(--white);
+}
+
 /* ---------- Índice de eventos (home) ---------- */
 .event-index {
   border-top: 1px solid var(--line);

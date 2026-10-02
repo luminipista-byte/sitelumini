@@ -3,6 +3,7 @@
  */
 const site = require('../data/site');
 const partners = require('../data/partners');
+const reviews = require('../data/reviews');
 const { esc, exists, waButton } = require('./html');
 
 const eyebrow = (text) => `<p class="eyebrow">${esc(text)}</p>`;
@@ -101,4 +102,29 @@ const businessSchema = () => ({
   sameAs: [site.instagram.url],
 });
 
-module.exports = { eyebrow, stats, partnerGrid, finalCta, pageHead, breadcrumbs, breadcrumbSchema, businessSchema };
+const reviewsSection = (rel) => `
+<section class="section section--navy" aria-labelledby="reviews-title">
+  <div class="wrap">
+    <div class="section-head section-head--split">
+      <div>
+        ${eyebrow('Depoimentos')}
+        <h2 id="reviews-title" class="section-head__title">O que dizem sobre a Lumini.</h2>
+      </div>
+      <p class="section-head__text">Avaliações de clientes no ${reviews.source}.</p>
+    </div>
+    <ul class="reviews" role="list">
+      ${reviews.items
+        .map(
+          (r) => `<li class="review">
+        <p class="review__stars" aria-label="${r.rating} de 5 estrelas">${'★'.repeat(r.rating)}</p>
+        <blockquote class="review__text">${r.text.map((t) => `<p>${esc(t)}</p>`).join('')}</blockquote>
+        <p class="review__author"><img src="${rel}assets/img/avaliacoes/${r.photo}" alt="" width="48" height="48" loading="lazy" decoding="async"><span><strong>${esc(r.name)}</strong>Avaliação no ${reviews.source}</span></p>
+      </li>`
+        )
+        .join('')}
+    </ul>
+    <p class="section-foot"><a class="link-arrow" href="${reviews.url}" target="_blank" rel="noopener">Ver avaliações no Google</a></p>
+  </div>
+</section>`;
+
+module.exports = { reviewsSection, eyebrow, stats, partnerGrid, finalCta, pageHead, breadcrumbs, breadcrumbSchema, businessSchema };
