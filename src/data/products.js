@@ -315,7 +315,7 @@ module.exports = [
     image: { src: 'produtos/cabine-vintage/capa', alt: 'Cabine Vintage Fotográfica em madeira com flash, tripé e impressora', pos: '50% 62%', video: 'cabine-vintage' },
     gallery: [
       { src: 'produtos/cabine-vintage/detalhe-1', alt: 'Cabine Vintage com flash, tripé e impressora em jardim', pos: '50% 44%', ratio: '3/4' },
-      { src: 'produtos/cabine-vintage/detalhe-2', alt: 'Cabine Vintage Fotográfica com acessórios em evento noturno', ratio: '3/4' },
+      { src: 'produtos/cabine-vintage/detalhe-2', alt: 'Cabine Vintage Fotográfica com flash aceso e impressora em evento noturno', ratio: '3/4' },
     ],
     seo: {
       title: 'Cabine Fotográfica Vintage para eventos em BH',

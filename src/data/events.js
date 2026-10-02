@@ -50,7 +50,7 @@ module.exports = {
     { src: 'eventos/ev-debutante', video: 'eventos/ev-debutante', alt: 'Debutante girando na Pista de LED em festa de 15 anos', caption: 'Pista de LED · 15 Anos' },
     { src: 'eventos/ev-totem-carro', alt: 'Totem Pro ao lado de automóvel em concessionária', caption: 'Totem Pro · Concessionária' },
     { src: 'eventos/ev-tunel-debutante', video: 'eventos/ev-tunel-debutante', alt: 'Debutante dançando e girando de vestido dentro do Túnel de LED', caption: 'Túnel de LED · 15 Anos' },
-    { src: 'eventos/ev-cabine', video: 'eventos/ev-cabine', alt: 'Convidados retirando fotos impressas na Cabine Vintage durante a festa', caption: 'Cabine Vintage · Casamento' },
+    { src: 'eventos/ev-cabine', video: 'eventos/ev-cabine', alt: 'Convidadas posando para a Cabine Vintage e a foto aparecendo na tela', caption: 'Cabine Vintage · Casamento' },
     { src: 'eventos/ev-valsa', alt: 'Valsa de debutante sobre a Pista de LED', caption: 'Pista de LED · Valsa' },
     { src: 'eventos/ev-totempro-foto', video: 'eventos/ev-totempro-foto', alt: 'Convidada posando para o Totem Pro e a foto sendo impressa na hora', caption: 'Totem Pro · Concessionária' },
     { src: 'eventos/ev-tunel-concessionaria', video: 'eventos/ev-tunel-concessionaria', alt: 'Túnel de LED na entrada de uma concessionária', caption: 'Túnel de LED · Concessionária' },
