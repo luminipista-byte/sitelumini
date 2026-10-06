@@ -168,10 +168,12 @@
   function buildMessage(form) {
     var sel = form.elements.produto;
     var waName = sel.value;
+    var nome = form.elements.nome ? form.elements.nome.value.trim().replace(/\s+/g, ' ').slice(0, 80) : '';
+    var intro = nome ? 'Olá! Meu nome é ' + nome + '. Vim do site e' : 'Olá! Vim do site e';
     var lines = [
       waName
-        ? 'Olá! Vim do site e gostaria de solicitar um orçamento ' + waName + ' para meu evento.'
-        : 'Olá! Vim do site e gostaria de solicitar um orçamento para meu evento.',
+        ? intro + ' gostaria de solicitar um orçamento ' + waName + ' para meu evento.'
+        : intro + ' gostaria de solicitar um orçamento para meu evento.',
     ];
     var evento = form.elements.evento.value;
     var data = form.elements.data.value;
@@ -226,7 +228,7 @@
       else mform.removeAttribute('data-origin');
       doc.classList.add('modal-open');
       modal.showModal();
-      var first = mform.elements.evento;
+      var first = mform.elements.nome;
       if (first && !('ontouchstart' in window)) first.focus();
       return true;
     };

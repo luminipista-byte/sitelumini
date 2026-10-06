@@ -1,5 +1,5 @@
 /**
- * Campos do pedido de orçamento (equipamento, tipo de evento, data, local).
+ * Campos do pedido de orçamento (nome, equipamento, tipo de evento, data, local).
  * Usados no formulário da página Contato e no pop-up dos botões de orçamento.
  * O envio é tratado em assets/js/main.js ([data-quote-form]).
  */
@@ -8,6 +8,10 @@ const events = require('../data/events');
 const { esc } = require('./html');
 
 const quoteFields = (id) => `
+      <div class="field">
+        <label for="${id}-nome">Nome completo</label>
+        <input id="${id}-nome" name="nome" type="text" autocomplete="name" required maxlength="80" placeholder="Seu nome e sobrenome">
+      </div>
       <div class="field">
         <label for="${id}-produto">Equipamento</label>
         <select id="${id}-produto" name="produto">

@@ -121,7 +121,7 @@ Um único listener em `assets/js/tracking.js` chama
 Sem JavaScript, os links continuam abrindo o WhatsApp normalmente.
 
 **Pop-up de orçamento:** os botões de orçamento não vão direto ao WhatsApp —
-abrem um pop-up (`src/lib/quote.js`) com equipamento (pré-selecionado pelo
+abrem um pop-up (`src/lib/quote.js`) com nome completo, equipamento (pré-selecionado pelo
 botão), tipo de evento, data e local. Ao enviar, a mensagem vai pronta para o
 WhatsApp e só então são disparados o Lead e a conversão do Google Ads
 (`placement` = `popup_<botão>`). Botões com `data-direct` (parceria, número de
