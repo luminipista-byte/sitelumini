@@ -4,6 +4,7 @@
 const site = require('../data/site');
 const products = require('../data/products');
 const { esc, exists, waButton, waHref } = require('./html');
+const { quoteModal } = require('./quote');
 
 const NAV = [
   { href: '', label: 'Início', key: 'home' },
@@ -94,7 +95,7 @@ const footer = (rel) => `
       <div class="site-footer__col">
         <h2 class="site-footer__title">Contato</h2>
         <ul>
-          <li><a href="${esc(waHref())}" target="_blank" rel="noopener" data-wa data-product="geral" data-product-name="Orçamento geral" data-placement="footer">WhatsApp ${esc(site.whatsapp.display)}</a></li>
+          <li><a href="${esc(waHref())}" target="_blank" rel="noopener" data-wa data-product="geral" data-product-name="Orçamento geral" data-placement="footer" data-direct>WhatsApp ${esc(site.whatsapp.display)}</a></li>
           <li><a href="${site.instagram.url}" target="_blank" rel="noopener">Instagram ${esc(site.instagram.handle)}</a></li>
           <li>${esc(site.address.city)} — ${esc(site.address.state)}</li>
           <li>Atendimento em BH, Contagem, Betim e região metropolitana</li>
@@ -163,6 +164,7 @@ ${header(rel, o.active, o.overlay)}
 ${o.body}
 </main>
 ${footer(rel)}
+${quoteModal()}
 <div class="sticky-cta" data-sticky-cta>
   ${waButton({ label: 'Solicitar orçamento pelo WhatsApp', product: sticky.product, productName: sticky.productName, variation: sticky.variation, waName: sticky.waName, placement: 'sticky_mobile', cls: 'btn btn--gold btn--block' })}
 </div>

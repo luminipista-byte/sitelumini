@@ -33,10 +33,12 @@ const waHref = (waName, message) =>
 
 /**
  * Botão/link de orçamento. Todo CTA de conversão passa por aqui — o
- * JavaScript (assets/js/tracking.js) intercepta pelos atributos data-wa.
+ * JavaScript intercepta pelos atributos data-wa: abre o pop-up de orçamento
+ * (Lead só no envio). Com `direct` (parceria, número de contato) vai direto
+ * ao WhatsApp e registra o Lead no clique. Sem JavaScript, o link funciona.
  */
-const waButton = ({ label = 'Solicitar orçamento', product = 'geral', productName = 'Orçamento geral', variation = '', waName = '', message = '', placement = '', cls = 'btn btn--gold' } = {}) =>
-  `<a class="${cls}" href="${esc(waHref(waName, message))}" target="_blank" rel="noopener" data-wa data-product="${esc(product)}" data-product-name="${esc(productName)}"${variation ? ` data-variation="${esc(variation)}"` : ''}${placement ? ` data-placement="${esc(placement)}"` : ''}>${esc(label)}</a>`;
+const waButton = ({ label = 'Solicitar orçamento', product = 'geral', productName = 'Orçamento geral', variation = '', waName = '', message = '', placement = '', cls = 'btn btn--gold', direct = product === 'parceria' } = {}) =>
+  `<a class="${cls}" href="${esc(waHref(waName, message))}" target="_blank" rel="noopener" data-wa data-product="${esc(product)}" data-product-name="${esc(productName)}"${variation ? ` data-variation="${esc(variation)}"` : ''}${placement ? ` data-placement="${esc(placement)}"` : ''}${direct ? ' data-direct' : ''}>${esc(label)}</a>`;
 
 /**
  * Vídeo decorativo sobre a foto (opcional). A foto continua sendo o LCP e o

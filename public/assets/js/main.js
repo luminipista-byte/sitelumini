@@ -160,37 +160,85 @@
     }
   }
 
-  /* Formulário de contato → mensagem pronta no WhatsApp */
-  var form = document.querySelector('[data-quote-form]');
-  if (form) {
+  /*
+   * Pedido de orçamento (formulário da página Contato e pop-up dos botões):
+   * monta a mensagem com equipamento, tipo de evento, data e local e envia
+   * pelo trackWhatsAppConversion (Meta Lead + Google Ads "Solicitar cotação").
+   */
+  function buildMessage(form) {
+    var sel = form.elements.produto;
+    var waName = sel.value;
+    var lines = [
+      waName
+        ? 'Olá! Vim do site e gostaria de solicitar um orçamento ' + waName + ' para meu evento.'
+        : 'Olá! Vim do site e gostaria de solicitar um orçamento para meu evento.',
+    ];
+    var evento = form.elements.evento.value;
+    var data = form.elements.data.value;
+    var local = form.elements.local.value.trim();
+    if (evento) lines.push('Tipo de evento: ' + evento);
+    if (data) lines.push('Data: ' + data.split('-').reverse().join('/'));
+    if (local) lines.push('Local: ' + local.slice(0, 120));
+    return lines.join('\n');
+  }
+
+  document.querySelectorAll('[data-quote-form]').forEach(function (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var sel = form.elements.produto;
-      var opt = sel.options[sel.selectedIndex];
-      var waName = sel.value;
-      var lines = [
-        waName
-          ? 'Olá! Vim do site e gostaria de solicitar um orçamento ' + waName + ' para meu evento.'
-          : 'Olá! Vim do site e gostaria de solicitar um orçamento para meu evento.',
-      ];
-      var evento = form.elements.evento.value;
-      var data = form.elements.data.value;
-      var cidade = form.elements.cidade.value.trim();
-      if (evento) lines.push('Tipo de evento: ' + evento);
-      if (data) lines.push('Data: ' + data.split('-').reverse().join('/'));
-      if (cidade) lines.push('Cidade: ' + cidade.slice(0, 80));
-      var message = lines.join('\n');
+      if (form.reportValidity && !form.reportValidity()) return;
+      var opt = form.elements.produto.options[form.elements.produto.selectedIndex];
+      var placement = form.getAttribute('data-placement') || 'formulario';
+      if (form.hasAttribute('data-origin')) placement += '_' + form.getAttribute('data-origin');
+      var message = buildMessage(form);
       if (typeof window.trackWhatsAppConversion === 'function') {
         window.trackWhatsAppConversion({
           product: opt.getAttribute('data-product') || 'geral',
           productName: opt.getAttribute('data-name') || 'Orçamento geral',
           variation: opt.getAttribute('data-variation') || '',
-          placement: 'formulario_contato',
+          placement: placement,
           message: message,
         });
       } else {
         window.location.href = 'https://wa.me/' + (window.LUMINI || {}).whatsapp + '?text=' + encodeURIComponent(message);
       }
+      var dlg = form.closest('dialog');
+      if (dlg && dlg.open) dlg.close();
+    });
+  });
+
+  /* Pop-up de orçamento */
+  var modal = document.querySelector('[data-quote-modal]');
+  if (modal && typeof modal.showModal === 'function') {
+    var mform = modal.querySelector('form');
+    var msel = mform.elements.produto;
+    window.luminiOpenQuote = function (o) {
+      o = o || {};
+      // pré-seleciona o equipamento do botão clicado (e o modelo, se houver)
+      var idx = 0;
+      for (var i = 0; i < msel.options.length; i++) {
+        var op = msel.options[i];
+        if (op.getAttribute('data-product') !== (o.product || 'geral')) continue;
+        if ((op.getAttribute('data-variation') || '') === (o.variation || '')) { idx = i; break; }
+        if (!idx) idx = i;
+      }
+      msel.selectedIndex = idx;
+      if (o.placement) mform.setAttribute('data-origin', o.placement);
+      else mform.removeAttribute('data-origin');
+      doc.classList.add('modal-open');
+      modal.showModal();
+      var first = mform.elements.evento;
+      if (first && !('ontouchstart' in window)) first.focus();
+      return true;
+    };
+    modal.addEventListener('close', function () {
+      doc.classList.remove('modal-open');
+    });
+    modal.querySelector('[data-quote-close]').addEventListener('click', function () {
+      modal.close();
+    });
+    // clique fora do formulário fecha
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) modal.close();
     });
   }
 })();

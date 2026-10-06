@@ -233,6 +233,17 @@
     if (!a) return;
     // Ctrl/Cmd/Shift-clique ou botão do meio: deixa o navegador agir, mas registra o Lead
     var modified = e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1;
+    // Botões de orçamento abrem o pop-up (assets/js/main.js); o Lead é
+    // registrado só no envio do formulário. data-direct vai direto ao WhatsApp.
+    if (!modified && !a.hasAttribute('data-direct') && typeof window.luminiOpenQuote === 'function') {
+      e.preventDefault();
+      var opened = window.luminiOpenQuote({
+        product: a.getAttribute('data-product'),
+        variation: a.getAttribute('data-variation') || '',
+        placement: a.getAttribute('data-placement') || '',
+      });
+      if (opened) return;
+    }
     if (!modified) e.preventDefault();
     var payload = {
       product: a.getAttribute('data-product'),

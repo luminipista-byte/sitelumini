@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,300..700&family=Manrope:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../../assets/css/style.css?v=9ba9f207">
+<link rel="stylesheet" href="../../assets/css/style.css?v=cb93e5e2">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://luminipista.com.br/#empresa","name":"Lumini Pista de LED","legalName":"LUMINI PISTA LOCACAO E SERVICOS LTDA","taxID":"37.186.001/0001-82","url":"https://luminipista.com.br/","telephone":"+55 31 97193-8537","foundingDate":"2020","image":"https://luminipista.com.br/assets/img/marca/og-lumini.jpg","logo":"https://luminipista.com.br/assets/img/marca/logo-lumini.png","description":"Fabricação, locação e operação de pistas de LED, Totem Pro, Totem de LED, Túnel de LED e Cabine Vintage Fotográfica para eventos em Belo Horizonte e região metropolitana.","address":{"@type":"PostalAddress","addressLocality":"Contagem","addressRegion":"MG","addressCountry":"BR"},"areaServed":[{"@type":"City","name":"Belo Horizonte"},{"@type":"City","name":"Contagem"},{"@type":"City","name":"Betim"},{"@type":"AdministrativeArea","name":"Região Metropolitana de Belo Horizonte"},{"@type":"State","name":"Minas Gerais"}],"sameAs":["https://www.instagram.com/lumini_pista/"]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Cabine Vintage Fotográfica","serviceType":"Locação de Cabine Vintage Fotográfica para eventos","description":"Cabine fotográfica vintage em madeira com impressão na hora: tirinha, horizontal ou polaroid, com arte personalizada. Operador incluso. BH, Contagem e Betim.","url":"https://luminipista.com.br/produtos/cabine-vintage/","provider":{"@id":"https://luminipista.com.br/#empresa"},"areaServed":[{"@type":"Place","name":"Belo Horizonte"},{"@type":"Place","name":"Contagem"},{"@type":"Place","name":"Betim"},{"@type":"Place","name":"Região Metropolitana de Belo Horizonte"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://luminipista.com.br/"},{"@type":"ListItem","position":2,"name":"Produtos","item":"https://luminipista.com.br/produtos/"},{"@type":"ListItem","position":3,"name":"Cabine Vintage Fotográfica","item":"https://luminipista.com.br/produtos/cabine-vintage/"}]}</script>
@@ -186,7 +186,7 @@
       <div class="site-footer__col">
         <h2 class="site-footer__title">Contato</h2>
         <ul>
-          <li><a href="https://wa.me/5531971938537?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20evento." target="_blank" rel="noopener" data-wa data-product="geral" data-product-name="Orçamento geral" data-placement="footer">WhatsApp (31) 9 7193-8537</a></li>
+          <li><a href="https://wa.me/5531971938537?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20evento." target="_blank" rel="noopener" data-wa data-product="geral" data-product-name="Orçamento geral" data-placement="footer" data-direct>WhatsApp (31) 9 7193-8537</a></li>
           <li><a href="https://www.instagram.com/lumini_pista/" target="_blank" rel="noopener">Instagram @lumini_pista</a></li>
           <li>Contagem — MG</li>
           <li>Atendimento em BH, Contagem, Betim e região metropolitana</li>
@@ -198,11 +198,46 @@
     </div>
   </div>
 </footer>
+
+<dialog class="quote-modal" data-quote-modal aria-labelledby="quote-modal-title">
+  <form class="quote-modal__form" data-quote-form data-placement="popup" method="dialog">
+    <button class="quote-modal__close" type="button" data-quote-close aria-label="Fechar">×</button>
+    <p class="eyebrow">Orçamento pelo WhatsApp</p>
+    <h2 id="quote-modal-title" class="quote-modal__title">Conte sobre o seu evento</h2>
+    <p class="quote-modal__lead">Preencha os dados e a mensagem já chega pronta no WhatsApp da Lumini.</p>
+    
+      <div class="field">
+        <label for="m-produto">Equipamento</label>
+        <select id="m-produto" name="produto">
+          <option value="" data-product="geral" data-name="Orçamento geral">Ainda não sei / mais de um</option>
+          <optgroup label="Pista de LED"><option value="de Pista de LED" data-product="pista_de_led" data-name="Pista de LED">Pista de LED — qualquer modelo</option><option value="de Pista de LED modelo Infinity" data-product="pista_de_led" data-variation="infinity" data-name="Pista de LED — Pista Infinity">Pista Infinity</option><option value="de Pista de LED modelo Galaxy" data-product="pista_de_led" data-variation="galaxy" data-name="Pista de LED — Pista Galaxy">Pista Galaxy</option><option value="de Pista de LED modelo Paris Light Way" data-product="pista_de_led" data-variation="paris_light_way" data-name="Pista de LED — Pista Paris Light Way">Pista Paris Light Way</option><option value="de Pista de LED modelo Paris Black" data-product="pista_de_led" data-variation="paris_black" data-name="Pista de LED — Pista Paris Black">Pista Paris Black</option></optgroup><option value="de Totem Pro" data-product="totem_pro" data-name="Totem Pro">Totem Pro</option><option value="de Totem de LED" data-product="totem_de_led" data-name="Totem de LED">Totem de LED</option><option value="de Túnel de LED" data-product="tunel_de_led" data-name="Túnel de LED">Túnel de LED</option><option value="da Cabine Vintage" data-product="cabine_vintage" data-name="Cabine Vintage Fotográfica">Cabine Vintage Fotográfica</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="m-evento">Tipo de evento</label>
+        <select id="m-evento" name="evento" required>
+          <option value="">Selecione</option>
+          <option>Casamentos</option><option>Formaturas</option><option>15 anos</option><option>Aniversários</option><option>Eventos corporativos</option><option>Festas</option><option>Outros eventos</option>
+        </select>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="m-data">Data do evento</label>
+          <input id="m-data" name="data" type="date">
+        </div>
+        <div class="field">
+          <label for="m-local">Local do evento</label>
+          <input id="m-local" name="local" type="text" autocomplete="address-level2" placeholder="Espaço e cidade" required maxlength="120">
+        </div>
+      </div>
+    <button class="btn btn--gold btn--lg btn--block" type="submit">Enviar pelo WhatsApp</button>
+  </form>
+</dialog>
 <div class="sticky-cta" data-sticky-cta>
   <a class="btn btn--gold btn--block" href="https://wa.me/5531971938537?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20da%20Cabine%20Vintage%20para%20meu%20evento." target="_blank" rel="noopener" data-wa data-product="cabine_vintage" data-product-name="Cabine Vintage Fotográfica" data-placement="sticky_mobile">Solicitar orçamento pelo WhatsApp</a>
 </div>
 <script>window.LUMINI={"whatsapp":"5531971938537","metaPixelId":"2143955416549744","googleAds":{"id":"AW-11218835567","label":"PY6MCN3Kj40dEO-wx-Up","sendTo":"AW-11218835567/PY6MCN3Kj40dEO-wx-Up"},"ga4":null,"gtm":null};</script>
-<script src="../../assets/js/tracking.js?v=9ba9f207" defer></script>
-<script src="../../assets/js/main.js?v=9ba9f207" defer></script>
+<script src="../../assets/js/tracking.js?v=cb93e5e2" defer></script>
+<script src="../../assets/js/main.js?v=cb93e5e2" defer></script>
 </body>
 </html>

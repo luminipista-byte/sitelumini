@@ -3,6 +3,7 @@ const products = require('../data/products');
 const partners = require('../data/partners');
 const events = require('../data/events');
 const { esc, picture, waButton } = require('../lib/html');
+const { quoteFields } = require('../lib/quote');
 const { eyebrow, stats, partnerGrid, finalCta, pageHead, breadcrumbSchema, businessSchema } = require('../lib/components');
 
 /* ---------- A Lumini ---------- */
@@ -298,40 +299,9 @@ ${pageHead({
 })}
 <section class="section section--tight">
   <div class="wrap contact">
-    <form class="quote-form" data-quote-form novalidate>
+    <form class="quote-form" data-quote-form data-placement="formulario_contato">
       <h2 class="quote-form__title">Monte sua mensagem</h2>
-      <div class="field">
-        <label for="q-produto">Equipamento</label>
-        <select id="q-produto" name="produto">
-          <option value="" data-product="geral" data-name="Orçamento geral">Ainda não sei / mais de um</option>
-          ${products
-            .map((p) =>
-              p.variations
-                ? `<optgroup label="${esc(p.name)}"><option value="${esc(p.waName)}" data-product="${p.tracking}" data-name="${esc(p.name)}">${esc(p.name)} — qualquer modelo</option>${p.variations
-                    .map((v) => `<option value="${esc(v.waName)}" data-product="${p.tracking}" data-variation="${v.tracking}" data-name="${esc(`${p.name} — ${v.name}`)}">${esc(v.name)}</option>`)
-                    .join('')}</optgroup>`
-                : `<option value="${esc(p.waName)}" data-product="${p.tracking}" data-name="${esc(p.name)}">${esc(p.name)}</option>`
-            )
-            .join('')}
-        </select>
-      </div>
-      <div class="field">
-        <label for="q-evento">Tipo de evento</label>
-        <select id="q-evento" name="evento">
-          <option value="">Selecione</option>
-          ${events.types.map((t) => `<option>${esc(t.name)}</option>`).join('')}
-        </select>
-      </div>
-      <div class="field-row">
-        <div class="field">
-          <label for="q-data">Data do evento</label>
-          <input id="q-data" name="data" type="date">
-        </div>
-        <div class="field">
-          <label for="q-cidade">Cidade</label>
-          <input id="q-cidade" name="cidade" type="text" autocomplete="address-level2" placeholder="Ex.: Belo Horizonte">
-        </div>
-      </div>
+${quoteFields('q')}
       <button class="btn btn--gold btn--lg btn--block" type="submit">Enviar pelo WhatsApp</button>
       <p class="quote-form__note">Nenhum dado é armazenado no site: o formulário apenas prepara a mensagem no WhatsApp.</p>
     </form>
@@ -339,7 +309,7 @@ ${pageHead({
     <aside class="contact__info">
       <div class="contact__block">
         <h2 class="contact__label">WhatsApp</h2>
-        <p class="contact__big">${waButton({ label: site.whatsapp.display, placement: 'contato_numero', cls: 'contact__link' })}</p>
+        <p class="contact__big">${waButton({ label: site.whatsapp.display, placement: 'contato_numero', cls: 'contact__link', direct: true })}</p>
       </div>
       <div class="contact__block">
         <h2 class="contact__label">Instagram</h2>
